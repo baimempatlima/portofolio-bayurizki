@@ -104,7 +104,7 @@
                 <h2 class="text-4xl font-bold text-navy mb-4">Tentang Saya</h2>
                 <div class="w-24 h-1 bg-neon-blue mx-auto"></div>
             </div>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="grid md:grid-cols-1 gap-12 items-center">
                 <div class="fade-in">
                     <div class="bg-gradient-to-br from-navy to-navy-dark p-8 rounded-2xl text-white">
                         <div class="text-6xl mb-4">🎯</div> 
@@ -112,9 +112,13 @@
                         <p class="text-gray-200 leading-relaxed">
                             Bayu Rizki - Sangat tertarik dan ingin terus berkembang dalam bidang pengembangan aplikasi, terutama dalam bidang IT. Saya percaya bahwa pembelajaran adalah proses seumur hidup, sehingga saya terus mengembangkan keahlian dalam bidang sistem informasi, data mining, dan integrasi teknologi. Saya siap berkontribusi melalui inovasi dan solusi berbasis teknologi di lingkungan akademik maupun industri.
                         </p>
+                        <hr class="my-6 border-gray-300">
+                        <div class="text-6xl mb-4">🔬</div> 
+                        <h4 class="text-2xl font-bold mb-4">Spesialisasi</h4>
+                        <p class="ext-gray-200 leading-relaxed">Programmer, System Analyst, Integration Analyst, Data Mining</p>
                     </div>
                 </div>
-<!--                 <div class="fade-in">
+                <!-- <div class="fade-in">
                     <div class="space-y-6">
                         <div class="flex items-center space-x-4">
                             <div class="w-12 h-12 bg-neon-blue/20 rounded-full flex items-center justify-center">
@@ -154,7 +158,7 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>  -->
             </div>
         </div>
     </section>
@@ -419,7 +423,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold">Email</h4>
-                                <p class="text-gray-200">baimempatlima@gmail.com</p>
+                                <p class="text-gray-200">bayu.rizki@uin-alauddin.ac.id</p>
                             </div>
                         </div>
                         <div class="flex items-center space-x-4">
@@ -530,7 +534,6 @@
                     current = section.getAttribute('id');
                 }
             });
-
             navLinks.forEach(link => {
                 link.classList.remove('text-neon-blue');
                 if (link.getAttribute('href') === `#${current}`) {
