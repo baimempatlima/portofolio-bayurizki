@@ -105,7 +105,7 @@
                 <div class="w-24 h-1 bg-neon-blue mx-auto"></div>
             </div>
             <div class="grid md:grid-cols-1 gap-12 items-center">
-                <div class="fade-in">
+                <div class="text-center fade-in">
                     <div class="bg-gradient-to-br from-navy to-navy-dark p-8 rounded-2xl text-white">
                         <div class="text-6xl mb-4">🎯</div> 
                         <h3 class="text-2xl font-bold mb-4">Ringkasan </h3>
@@ -534,6 +534,7 @@
                     current = section.getAttribute('id');
                 }
             });
+
             navLinks.forEach(link => {
                 link.classList.remove('text-neon-blue');
                 if (link.getAttribute('href') === `#${current}`) {
