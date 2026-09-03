@@ -1,559 +1,2596 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bayu Rizki - IT Enthusiast</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bayu Rizki — IT Enthusiast | System &amp; Integration Analyst</title>
+    <meta
+      name="description"
+      content="Profil profesional Bayu Rizki: Dosen Ilmu Perpustakaan UIN Alauddin Makassar, IT Integration Analyst, System Analyst, dan penggiat data mining."
+    />
+    <meta name="author" content="Bayu Rizki" />
+    <meta name="theme-color" content="#0A66C2" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Bayu Rizki — IT Enthusiast" />
+    <meta
+      property="og:description"
+      content="Dosen Ilmu Perpustakaan UIN Alauddin Makassar · IT Integration Analyst · System Analyst · Data Mining"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A66C2'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,Helvetica,sans-serif' font-size='30' font-weight='bold' fill='white'%3EBR%3C/text%3E%3C/svg%3E"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- UI Libraries (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'navy': '#1e3a8a',
-                        'navy-dark': '#1e40af',
-                        'neon-blue': '#00d4ff',
-                    }
-                }
-            }
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              li: {
+                blue: "#0A66C2",
+                blueh: "#004182",
+                bluel: "#E8F3FF",
+                sky: "#70B5F9",
+                green: "#01754F",
+                bg: "#F4F2EE",
+                line: "#E4E1DC",
+                dark: "#181C20",
+                card: "#1D2226",
+                darkline: "#38434F",
+              },
+              navy: "#1e3a8a",
+              "neon-blue": "#00d4ff",
+            },
+            fontFamily: {
+              sans: [
+                "Inter",
+                "ui-sans-serif",
+                "system-ui",
+                "-apple-system",
+                "Segoe UI",
+                "Roboto",
+                "sans-serif",
+              ],
+            },
+            boxShadow: {
+              card: "0 0 0 1px rgba(0,0,0,.08)",
+              cardhover: "0 8px 24px rgba(0,0,0,.12)",
+              pop: "0 12px 40px rgba(0,0,0,.18)",
+            },
+            keyframes: {
+              floaty: {
+                "0%,100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-8px)" },
+              },
+              shine: {
+                "0%": { backgroundPosition: "0% 50%" },
+                "100%": { backgroundPosition: "200% 50%" },
+              },
+              pop: {
+                "0%": { opacity: 0, transform: "scale(.96) translateY(8px)" },
+                "100%": { opacity: 1, transform: "scale(1) translateY(0)" },
+              },
+            },
+            animation: {
+              floaty: "floaty 4s ease-in-out infinite",
+              shine: "shine 6s linear infinite",
+              pop: "pop .18s ease-out",
+            },
+          },
+        },
+      };
+
+      // Terapkan tema sebelum render agar tidak berkedip
+      (function () {
+        var t = localStorage.getItem("theme");
+        if (
+          t === "dark" ||
+          (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
         }
+      })();
     </script>
+
     <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+      }
+      ::selection {
+        background: #0a66c2;
+        color: #fff;
+      }
+
+      /* Scrollbar ala aplikasi modern */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c8c5c0;
+        border-radius: 99px;
+        border: 3px solid transparent;
+        background-clip: content-box;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #38434f;
+        background-clip: content-box;
+      }
+
+      .cover-gradient {
+        background: linear-gradient(
+          115deg,
+          #0a66c2 0%,
+          #004182 35%,
+          #0f172a 70%,
+          #0a66c2 100%
+        );
+        background-size: 220% 220%;
+        animation: shine 12s linear infinite alternate;
+      }
+      .cover-grid {
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 38px 38px;
+        mask-image: radial-gradient(
+          ellipse 90% 90% at 50% 0%,
+          #000 30%,
+          transparent 75%
+        );
+        -webkit-mask-image: radial-gradient(
+          ellipse 90% 90% at 50% 0%,
+          #000 30%,
+          transparent 75%
+        );
+      }
+      .text-gradient {
+        background: linear-gradient(120deg, #0a66c2, #00d4ff 60%, #0a66c2);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shine 5s linear infinite;
+      }
+      .dark .text-gradient {
+        background-image: linear-gradient(
+          120deg,
+          #70b5f9,
+          #a5f3fc 60%,
+          #70b5f9
+        );
+      }
+
+      /* Timeline pengalaman ala LinkedIn */
+      .tl-item {
+        position: relative;
+      }
+      .tl-item:not(:last-child)::before {
+        content: "";
+        position: absolute;
+        left: 23px;
+        top: 56px;
+        bottom: -10px;
+        width: 2px;
+        background: #e4e1dc;
+      }
+      .dark .tl-item:not(:last-child)::before {
+        background: #38434f;
+      }
+
+      .skill-bar > span {
+        width: 0;
+        transition: width 1.1s cubic-bezier(0.22, 0.68, 0, 1);
+      }
+      .nav-underline {
+        position: relative;
+      }
+      .nav-underline::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        height: 2px;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.25s ease;
+      }
+      .nav-underline.active::after,
+      .nav-underline:hover::after {
+        transform: scaleX(1);
+      }
+
+      .lift {
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+      .lift:hover {
+        transform: translateY(-4px);
+      }
+
+      .chip {
+        transition: all 0.2s ease;
+      }
+      .chip:hover {
+        transform: translateY(-2px);
+      }
+
+      .highlight-flash {
+        animation: flash 1.6s ease;
+      }
+      @keyframes flash {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(10, 102, 194, 0);
         }
-        .text-gradient {
-            background: linear-gradient(135deg, #00d4ff, #0ea5e9);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        25% {
+          box-shadow: 0 0 0 4px rgba(10, 102, 194, 0.35);
         }
-        .hover-glow:hover {
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+      }
+
+      [x-cloak] {
+        display: none !important;
+      }
+      .clamp-3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      @media print {
+        nav,
+        #bottom-nav,
+        #to-top,
+        #progress-bar,
+        .no-print {
+          display: none !important;
         }
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
+        body {
+          background: #fff !important;
         }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .card {
+          box-shadow: none !important;
+          border: 1px solid #ddd !important;
+          break-inside: avoid;
         }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
     </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-lg z-50 transition-all duration-300">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-navy">Bayu Rizki</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link text-gray-700 hover:text-neon-blue transition-colors duration-300">Home</a>
-                    <a href="#about" class="nav-link text-gray-700 hover:text-neon-blue transition-colors duration-300">About</a>
-                    <a href="#experience" class="nav-link text-gray-700 hover:text-neon-blue transition-colors duration-300">Experience</a>
-                    <a href="#projects" class="nav-link text-gray-700 hover:text-neon-blue transition-colors duration-300">Projects</a>
-                    <a href="#skills" class="nav-link text-gray-700 hover:text-neon-blue transition-colors duration-300">Skills</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-neon-blue transition-colors duration-300">Contact</a>
-                </div>
-                <button id="mobile-menu-btn" class="md:hidden text-navy">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-                <a href="#home" class="block py-2 text-gray-700 hover:text-neon-blue">Home</a>
-                <a href="#about" class="block py-2 text-gray-700 hover:text-neon-blue">About</a>
-                <a href="#experience" class="block py-2 text-gray-700 hover:text-neon-blue">Experience</a>
-                <a href="#projects" class="block py-2 text-gray-700 hover:text-neon-blue">Projects</a>
-                <a href="#skills" class="block py-2 text-gray-700 hover:text-neon-blue">Skills</a>
-                <a href="#contact" class="block py-2 text-gray-700 hover:text-neon-blue">Contact</a>
-            </div>
+  </head>
+  <body
+    class="bg-li-bg dark:bg-li-dark text-[#000000e6] dark:text-[#ffffffe6] antialiased"
+  >
+    <!-- Progress bar baca -->
+    <div
+      id="progress-bar"
+      class="fixed top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-li-blue via-neon-blue to-li-blue z-[60]"
+    ></div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav
+      id="navbar"
+      class="fixed top-0 inset-x-0 z-50 bg-white/90 dark:bg-li-card/90 backdrop-blur-md border-b border-li-line dark:border-li-darkline transition-shadow duration-300"
+    >
+      <div class="max-w-6xl mx-auto px-3 sm:px-6">
+        <div class="flex items-center gap-3 h-14">
+          <!-- Logo -->
+          <a
+            href="#profil"
+            class="shrink-0 w-9 h-9 rounded-lg bg-li-blue text-white grid place-items-center font-extrabold tracking-tight hover:bg-li-blueh transition-colors"
+            >BR</a
+          >
+
+          <!-- Pencarian -->
+          <div class="relative flex-1 max-w-xs">
+            <i
+              class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-xs text-black/50 dark:text-white/50"
+            ></i>
+            <input
+              id="search-input"
+              type="text"
+              autocomplete="off"
+              placeholder="Cari keahlian, proyek, pengalaman…"
+              class="w-full pl-8 pr-3 py-1.5 text-sm rounded-md bg-li-bluel dark:bg-white/10 border border-transparent focus:border-li-blue focus:bg-white dark:focus:bg-li-dark outline-none transition-all placeholder:text-black/45 dark:placeholder:text-white/45"
+            />
+            <div
+              id="search-results"
+              class="hidden absolute mt-2 w-[min(22rem,80vw)] max-h-80 overflow-auto bg-white dark:bg-li-card rounded-lg shadow-pop border border-li-line dark:border-li-darkline p-1.5 animate-pop"
+            ></div>
+          </div>
+
+          <!-- Menu desktop -->
+          <div class="hidden lg:flex items-center gap-1 ml-auto">
+            <a
+              href="#profil"
+              data-nav="profil"
+              class="nav-link nav-underline flex flex-col items-center px-3 py-1.5 text-[11px] text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-house text-base mb-0.5"></i>Beranda</a
+            >
+            <a
+              href="#tentang"
+              data-nav="tentang"
+              class="nav-link nav-underline flex flex-col items-center px-3 py-1.5 text-[11px] text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-user text-base mb-0.5"></i>Tentang</a
+            >
+            <a
+              href="#pengalaman"
+              data-nav="pengalaman"
+              class="nav-link nav-underline flex flex-col items-center px-3 py-1.5 text-[11px] text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-briefcase text-base mb-0.5"></i
+              >Pengalaman</a
+            >
+            <a
+              href="#proyek"
+              data-nav="proyek"
+              class="nav-link nav-underline flex flex-col items-center px-3 py-1.5 text-[11px] text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-diagram-project text-base mb-0.5"></i
+              >Proyek</a
+            >
+            <a
+              href="#keahlian"
+              data-nav="keahlian"
+              class="nav-link nav-underline flex flex-col items-center px-3 py-1.5 text-[11px] text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-code text-base mb-0.5"></i>Keahlian</a
+            >
+            <a
+              href="#kontak"
+              data-nav="kontak"
+              class="nav-link nav-underline flex flex-col items-center px-3 py-1.5 text-[11px] text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-envelope text-base mb-0.5"></i>Kontak</a
+            >
+            <span class="w-px h-8 bg-li-line dark:bg-li-darkline mx-2"></span>
+          </div>
+
+          <!-- Aksi kanan -->
+          <div class="flex items-center gap-1 ml-auto lg:ml-0">
+            <button
+              id="theme-toggle"
+              title="Ganti tema"
+              aria-label="Ganti tema"
+              class="w-9 h-9 rounded-full grid place-items-center text-black/60 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+            >
+              <i class="fa-solid fa-moon dark:!hidden"></i>
+              <i class="fa-solid fa-sun !hidden dark:!inline-block"></i>
+            </button>
+            <a
+              href="#kontak"
+              class="hidden sm:inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-li-blue hover:bg-li-blueh text-white text-sm font-semibold transition-colors"
+            >
+              <i class="fa-solid fa-paper-plane text-xs"></i> Hubungi
+            </a>
+          </div>
         </div>
+      </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="min-h-screen gradient-bg flex items-center justify-center text-white">
-        <div class="container mx-auto px-6 text-center">
-            <div class="fade-in">
-                <div class="w-48 h-48 mx-auto mb-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-6xl">
-                    👨‍💻
-                </div>
-                <h1 class="text-5xl md:text-7xl font-bold mb-6">BAYU RIZKI</h1>
-                <p class="text-xl md:text-2xl mb-8 text-neon-blue">IT Enthusiast</p>
-                <p class="text-lg mb-12 max-w-2xl mx-auto opacity-90">
-                    IT Enthusiast yang berkomitmen menghadirkan inovasi teknologi untuk masa depan
-                <div class="space-x-4">
-                    <a href="#about" class="bg-neon-blue text-navy px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-navy transition-all duration-300 hover-glow">
-                        Pelajari Lebih Lanjut
-                    </a>
-                    <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-navy transition-all duration-300">
-                        Hubungi Saya
-                    </a>
-                </div>
+    <main class="max-w-6xl mx-auto px-3 sm:px-6 pt-20 pb-24 lg:pb-14">
+      <div class="grid lg:grid-cols-12 gap-4 lg:gap-6">
+        <!-- ================= KOLOM UTAMA ================= -->
+        <div class="lg:col-span-8 min-w-0 space-y-4 lg:space-y-6">
+          <!-- ===== KARTU PROFIL ===== -->
+          <section
+            id="profil"
+            class="card bg-white dark:bg-li-card rounded-xl shadow-card dark:shadow-none dark:border dark:border-li-darkline overflow-hidden scroll-mt-20"
+          >
+            <!-- Cover -->
+            <div class="relative h-40 sm:h-52 cover-gradient">
+              <div class="absolute inset-0 cover-grid"></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent"
+              ></div>
+              <div class="absolute top-4 right-4 flex gap-2">
+                <button
+                  data-copy-link
+                  class="w-9 h-9 rounded-full bg-white/15 hover:bg-white/30 backdrop-blur text-white grid place-items-center transition-colors"
+                  title="Salin tautan profil"
+                >
+                  <i class="fa-solid fa-link text-sm"></i>
+                </button>
+                <button
+                  id="print-btn"
+                  class="w-9 h-9 rounded-full bg-white/15 hover:bg-white/30 backdrop-blur text-white grid place-items-center transition-colors"
+                  title="Cetak / simpan PDF"
+                >
+                  <i class="fa-solid fa-print text-sm"></i>
+                </button>
+              </div>
+              <div
+                class="absolute bottom-3 right-4 hidden sm:flex items-center gap-2 text-white/90 text-xs font-medium"
+              >
+                <span
+                  class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/15 backdrop-blur"
+                >
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"
+                  ></span>
+                  Aktif · Gowa, Sulawesi Selatan
+                </span>
+              </div>
             </div>
+
+            <div class="px-4 sm:px-8 pb-6">
+              <!-- Avatar -->
+              <div class="flex items-end justify-between -mt-16 sm:-mt-20 mb-3">
+                <div class="relative group">
+                  <div
+                    class="w-28 h-28 sm:w-36 sm:h-36 rounded-full ring-4 ring-white dark:ring-li-card bg-gradient-to-br from-li-blue to-navy text-white grid place-items-center text-4xl sm:text-5xl font-extrabold select-none shadow-lg animate-floaty"
+                  >
+                    BR
+                  </div>
+                  <span
+                    class="absolute bottom-2 right-1 w-7 h-7 rounded-full bg-emerald-500 ring-4 ring-white dark:ring-li-card grid place-items-center"
+                    title="Terbuka untuk kolaborasi"
+                  >
+                    <i class="fa-solid fa-check text-white text-[10px]"></i>
+                  </span>
+                </div>
+                <div
+                  class="hidden sm:flex flex-col items-end gap-2 mb-2 text-sm"
+                >
+                  <div
+                    class="flex items-center gap-2 text-black/70 dark:text-white/70"
+                  >
+                    <i
+                      class="fa-solid fa-building-columns text-li-blue dark:text-li-sky"
+                    ></i>
+                    <span class="font-semibold">UIN Alauddin Makassar</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-2 text-black/70 dark:text-white/70"
+                  >
+                    <i
+                      class="fa-solid fa-graduation-cap text-li-blue dark:text-li-sky"
+                    ></i>
+                    <span class="font-semibold">M.Kom · Sistem Informasi</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Identitas -->
+              <h1
+                class="text-2xl sm:text-3xl font-bold tracking-tight flex flex-wrap items-center gap-2"
+              >
+                Bayu Rizki
+                <i
+                  class="fa-solid fa-circle-check text-li-blue dark:text-li-sky text-base"
+                  title="Profil terverifikasi"
+                ></i>
+                <!-- <span
+                  class="text-xs font-medium text-black/50 dark:text-white/50"
+                  >· Dia/Beliau</span
+                > -->
+              </h1>
+              <p class="mt-1 text-base sm:text-lg font-medium">
+                <span
+                  id="typed-role"
+                  class="text-gradient font-semibold"
+                ></span>
+              </p>
+              <p class="mt-2 text-sm text-black/60 dark:text-white/60 max-w-xl">
+                IT Enthusiast yang berkomitmen menghadirkan inovasi teknologi
+                untuk masa depan — menjembatani dunia akademik dan industri.
+              </p>
+              <p
+                class="mt-2 text-sm text-black/55 dark:text-white/55 flex flex-wrap items-center gap-x-3 gap-y-1"
+              >
+                <span
+                  ><i class="fa-solid fa-location-dot mr-1.5"></i>Gowa, Sulawesi
+                  Selatan, Indonesia</span
+                >
+                <span class="hidden sm:inline">·</span>
+                <a
+                  href="#kontak"
+                  class="text-li-blue dark:text-li-sky font-semibold hover:underline"
+                  >Informasi kontak</a
+                >
+              </p>
+
+              <!-- Statistik singkat -->
+              <p
+                class="mt-3 text-sm font-semibold text-li-blue dark:text-li-sky"
+              >
+                <span class="counter" data-target="8">0</span>+ tahun perjalanan
+                IT · <span class="counter" data-target="7">0</span> peran
+                profesional
+              </p>
+
+              <!-- Tombol aksi -->
+              <div class="mt-5 flex flex-wrap gap-2">
+                <a
+                  href="https://www.linkedin.com/in/bayu-rizki-94913a171"
+                  target="_blank"
+                  rel="noopener"
+                  class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-li-blue hover:bg-li-blueh text-white text-sm font-semibold transition-all hover:shadow-lg hover:shadow-li-blue/30"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i> Terhubung
+                </a>
+                <a
+                  href="mailto:bayu.rizki@uin-alauddin.ac.id"
+                  class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-li-blue dark:border-li-sky text-li-blue dark:text-li-sky text-sm font-semibold hover:bg-li-bluel dark:hover:bg-white/10 transition-colors"
+                >
+                  <i class="fa-solid fa-envelope"></i> Kirim pesan
+                </a>
+                <button
+                  id="vcard-btn"
+                  class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-black/25 dark:border-white/30 text-black/70 dark:text-white/70 text-sm font-semibold hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+                >
+                  <i class="fa-solid fa-address-card"></i> Simpan kontak
+                </button>
+                <button
+                  id="share-btn"
+                  class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-black/25 dark:border-white/30 text-black/70 dark:text-white/70 text-sm font-semibold hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+                >
+                  <i class="fa-solid fa-share-nodes"></i> Bagikan
+                </button>
+              </div>
+
+              <!-- Banner terbuka untuk kolaborasi -->
+              <div
+                class="mt-5 rounded-lg border border-li-green/30 bg-li-green/5 dark:bg-li-green/10 p-4"
+              >
+                <p class="font-semibold text-sm flex items-center gap-2">
+                  <i
+                    class="fa-solid fa-handshake-angle text-li-green dark:text-emerald-400"
+                  ></i>
+                  Terbuka untuk kolaborasi
+                </p>
+                <p class="text-sm text-black/60 dark:text-white/60 mt-1">
+                  Riset sistem informasi, integrasi layanan digital, data
+                  mining, dan pengembangan aplikasi kampus.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===== TENTANG ===== -->
+          <section
+            id="tentang"
+            class="card bg-white dark:bg-li-card rounded-xl shadow-card dark:shadow-none dark:border dark:border-li-darkline p-4 sm:p-8 scroll-mt-20"
+            data-aos="fade-up"
+          >
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-user-tie text-li-blue dark:text-li-sky"></i>
+              Tentang
+            </h2>
+            <div
+              id="about-text"
+              class="text-[15px] leading-relaxed text-black/75 dark:text-white/75 space-y-3 clamp-3"
+            >
+              <p>
+                Sangat tertarik dan ingin terus berkembang dalam bidang
+                pengembangan aplikasi, terutama dalam bidang IT. Saya percaya
+                bahwa pembelajaran adalah proses seumur hidup, sehingga saya
+                terus mengembangkan keahlian dalam bidang sistem informasi, data
+                mining, dan integrasi teknologi.
+              </p>
+              <p>
+                Perjalanan karier saya bergerak dari programmer dan system
+                analyst di industri manufaktur dan digital agency, berlanjut ke
+                dunia perbankan sebagai IT Middleware/Integration Analyst di
+                CIMB Niaga dan Bank Mandiri, hingga kini mengabdi sebagai dosen
+                di Jurusan Ilmu Perpustakaan UIN Alauddin Makassar.
+              </p>
+              <p>
+                Saya siap berkontribusi melalui inovasi dan solusi berbasis
+                teknologi di lingkungan akademik maupun industri.
+              </p>
+            </div>
+            <button
+              id="about-toggle"
+              class="mt-3 text-sm font-semibold text-li-blue dark:text-li-sky hover:underline"
+            >
+              …lihat selengkapnya
+            </button>
+
+            <div class="mt-6 grid sm:grid-cols-2 gap-3">
+              <div
+                class="flex items-start gap-3 p-3 rounded-lg bg-li-bg dark:bg-white/5 lift"
+              >
+                <div
+                  class="w-10 h-10 shrink-0 rounded-lg bg-li-blue/10 text-li-blue dark:text-li-sky grid place-items-center"
+                >
+                  <i class="fa-solid fa-bullseye"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-sm">Fokus Utama</p>
+                  <p class="text-sm text-black/60 dark:text-white/60">
+                    Sistem informasi, integrasi layanan, dan data mining
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-3 p-3 rounded-lg bg-li-bg dark:bg-white/5 lift"
+              >
+                <div
+                  class="w-10 h-10 shrink-0 rounded-lg bg-li-blue/10 text-li-blue dark:text-li-sky grid place-items-center"
+                >
+                  <i class="fa-solid fa-microscope"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-sm">Spesialisasi</p>
+                  <p class="text-sm text-black/60 dark:text-white/60">
+                    Programmer · System Analyst · Integration Analyst · Data
+                    Mining
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===== SOROTAN / STATISTIK ===== -->
+          <section
+            class="card bg-white dark:bg-li-card rounded-xl shadow-card dark:shadow-none dark:border dark:border-li-darkline p-4 sm:p-8"
+            data-aos="fade-up"
+          >
+            <h2 class="text-xl font-bold mb-5 flex items-center gap-2">
+              <i
+                class="fa-solid fa-chart-simple text-li-blue dark:text-li-sky"
+              ></i>
+              Sorotan
+            </h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+              <div
+                class="rounded-lg p-4 bg-gradient-to-br from-li-blue to-li-blueh text-white lift"
+              >
+                <p class="text-3xl font-extrabold">
+                  <span class="counter" data-target="8">0</span>+
+                </p>
+                <p class="text-xs mt-1 opacity-90">Tahun perjalanan IT</p>
+              </div>
+              <div class="rounded-lg p-4 bg-li-bg dark:bg-white/5 lift">
+                <p
+                  class="text-3xl font-extrabold text-li-blue dark:text-li-sky"
+                >
+                  <span class="counter" data-target="7">0</span>
+                </p>
+                <p class="text-xs mt-1 text-black/60 dark:text-white/60">
+                  Peran profesional
+                </p>
+              </div>
+              <div class="rounded-lg p-4 bg-li-bg dark:bg-white/5 lift">
+                <p
+                  class="text-3xl font-extrabold text-li-blue dark:text-li-sky"
+                >
+                  <span class="counter" data-target="3">0</span>
+                </p>
+                <p class="text-xs mt-1 text-black/60 dark:text-white/60">
+                  Proyek besar
+                </p>
+              </div>
+              <div class="rounded-lg p-4 bg-li-bg dark:bg-white/5 lift">
+                <p
+                  class="text-3xl font-extrabold text-li-blue dark:text-li-sky"
+                >
+                  <span class="counter" data-target="15">0</span>
+                </p>
+                <p class="text-xs mt-1 text-black/60 dark:text-white/60">
+                  Modul &amp; fitur
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===== PENGALAMAN ===== -->
+          <section
+            id="pengalaman"
+            class="card bg-white dark:bg-li-card rounded-xl shadow-card dark:shadow-none dark:border dark:border-li-darkline p-4 sm:p-8 scroll-mt-20"
+            data-aos="fade-up"
+          >
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-xl font-bold flex items-center gap-2">
+                <i
+                  class="fa-solid fa-briefcase text-li-blue dark:text-li-sky"
+                ></i>
+                Pengalaman
+              </h2>
+              <span
+                class="text-xs font-semibold px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky"
+                >8 posisi</span
+              >
+            </div>
+
+            <div class="space-y-2">
+              <!-- 1 -->
+              <article
+                class="tl-item s-item flex gap-4 p-3 -mx-3 rounded-lg hover:bg-li-bg dark:hover:bg-white/5 transition-colors"
+                data-section="Pengalaman"
+                data-title="Dosen Asisten Ahli — Ilmu Perpustakaan"
+                data-sub="UIN Alauddin Makassar · 2025 – Sekarang"
+              >
+                <div
+                  class="w-12 h-12 shrink-0 rounded-lg bg-emerald-600 text-white grid place-items-center font-bold text-sm shadow-sm"
+                >
+                  UIN
+                </div>
+                <div class="min-w-0">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <h3 class="font-bold text-[15px]">
+                      CPNS Dosen Asisten Ahli — Jurusan Ilmu Perpustakaan
+                    </h3>
+                    <span
+                      class="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
+                      >Saat ini</span
+                    >
+                  </div>
+                  <p class="text-sm text-black/70 dark:text-white/70">
+                    Fakultas Adab dan Humaniora, UIN Alauddin Makassar · Penuh
+                    waktu
+                  </p>
+                  <p
+                    class="text-[13px] text-black/50 dark:text-white/50 mt-0.5"
+                  >
+                    2026 – Sekarang
+                  </p>
+                  <p class="text-[13px] text-black/50 dark:text-white/50">
+                    <i class="fa-solid fa-location-dot mr-1"></i>Gowa, Sulawesi
+                    Selatan, Indonesia
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mt-2.5">
+                    <span
+                      class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Pengajaran</span
+                    >
+                    <span
+                      class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Riset Sistem Informasi</span
+                    >
+                    <span
+                      class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Literasi Digital</span
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="tl-item s-item flex gap-4 p-3 -mx-3 rounded-lg hover:bg-li-bg dark:hover:bg-white/5 transition-colors"
+                data-section="Pengalaman"
+                data-title="Dosen Asisten Ahli — Ilmu Perpustakaan"
+                data-sub="UIN Alauddin Makassar · 2025 – Sekarang"
+              >
+                <div
+                  class="w-12 h-12 shrink-0 rounded-lg bg-emerald-600 text-white grid place-items-center font-bold text-sm shadow-sm"
+                >
+                  UIN
+                </div>
+                <div class="min-w-0">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <h3 class="font-bold text-[15px]">
+                      CPNS Dosen Asisten Ahli — Jurusan Ilmu Perpustakaan
+                    </h3>
+                    <span
+                      class="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
+                      >Saat ini</span
+                    >
+                  </div>
+                  <p class="text-sm text-black/70 dark:text-white/70">
+                    Fakultas Adab dan Humaniora, UIN Alauddin Makassar · Penuh
+                    waktu
+                  </p>
+                  <p
+                    class="text-[13px] text-black/50 dark:text-white/50 mt-0.5"
+                  >
+                    2025 – 2026
+                  </p>
+                  <p class="text-[13px] text-black/50 dark:text-white/50">
+                    <i class="fa-solid fa-location-dot mr-1"></i>Gowa, Sulawesi
+                    Selatan, Indonesia
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mt-2.5">
+                    <span
+                      class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Pengajaran</span
+                    >
+                    <span
+                      class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Riset Sistem Informasi</span
+                    >
+                    <span
+                      class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Literasi Digital</span
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- 2 -->
+              <article
+                class="tl-item s-item flex gap-4 p-3 -mx-3 rounded-lg hover:bg-li-bg dark:hover:bg-white/5 transition-colors"
+                data-section="Pengalaman"
+                data-title="IT Integration Analyst"
+                data-sub="PT Bank Mandiri Tbk · 2024 – 2025"
+              >
+                <div
+                  class="w-12 h-12 shrink-0 rounded-lg bg-[#003d79] text-white grid place-items-center font-bold text-xs shadow-sm"
+                >
+                  MDR
+                </div>
+                <div class="min-w-0">
+                  <h3 class="font-bold text-[15px]">
+                    IT Integration Analyst — IT Digital Branch Channel Delivery
+                  </h3>
+                  <p class="text-sm text-black/70 dark:text-white/70">
+                    PT Bank Mandiri Tbk · Penuh waktu
+                  </p>
+                  <p
+                    class="text-[13px] text-black/50 dark:text-white/50 mt-0.5"
+                  >
+                    2024 – 2025 · 1 thn
+                  </p>
+                  <p class="text-[13px] text-black/50 dark:text-white/50">
+                    <i class="fa-solid fa-location-dot mr-1"></i>Jakarta,
+                    Indonesia
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mt-2.5">
+                    <span
+                      class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Integrasi Sistem</span
+                    >
+                    <span
+                      class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Channel Delivery</span
+                    >
+                    <span
+                      class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >API</span
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- 3 -->
+              <article
+                class="tl-item s-item flex gap-4 p-3 -mx-3 rounded-lg hover:bg-li-bg dark:hover:bg-white/5 transition-colors"
+                data-section="Pengalaman"
+                data-title="IT Middleware, IA — ESB"
+                data-sub="PT Bank CIMB Niaga Tbk · 2022 – 2024"
+              >
+                <div
+                  class="w-12 h-12 shrink-0 rounded-lg bg-[#8c1d40] text-white grid place-items-center font-bold text-xs shadow-sm"
+                >
+                  CIMB
+                </div>
+                <div class="min-w-0">
+                  <h3 class="font-bold text-[15px]">
+                    IT Middleware, Integration Analyst — ESB
+                  </h3>
+                  <p class="text-sm text-black/70 dark:text-white/70">
+                    PT Bank CIMB Niaga Tbk · Penuh waktu
+                  </p>
+                  <p
+                    class="text-[13px] text-black/50 dark:text-white/50 mt-0.5"
+                  >
+                    2022 – 2024 · 2 thn
+                  </p>
+                  <p class="text-[13px] text-black/50 dark:text-white/50">
+                    <i class="fa-solid fa-location-dot mr-1"></i>Bintaro,
+                    Tangerang Selatan, Indonesia
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mt-2.5">
+                    <span
+                      class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Enterprise Service Bus</span
+                    >
+                    <span
+                      class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Middleware</span
+                    >
+                    <span
+                      class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Web Service</span
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- 4 -->
+              <article
+                class="tl-item s-item flex gap-4 p-3 -mx-3 rounded-lg hover:bg-li-bg dark:hover:bg-white/5 transition-colors"
+                data-section="Pengalaman"
+                data-title="Dosen S1 Sistem Informasi"
+                data-sub="STMIK Bina Adinata Bulukumba · 2020 – 2021"
+              >
+                <div
+                  class="w-12 h-12 shrink-0 rounded-lg bg-indigo-600 text-white grid place-items-center font-bold text-xs shadow-sm"
+                >
+                  STMIK
+                </div>
+                <div class="min-w-0">
+                  <h3 class="font-bold text-[15px]">
+                    Dosen — S1 Sistem Informasi
+                  </h3>
+                  <p class="text-sm text-black/70 dark:text-white/70">
+                    STMIK Bina Adinata Bulukumba · Pengajar
+                  </p>
+                  <p
+                    class="text-[13px] text-black/50 dark:text-white/50 mt-0.5"
+                  >
+                    2020 – 2021 · 1 thn
+                  </p>
+                  <p class="text-[13px] text-black/50 dark:text-white/50">
+                    <i class="fa-solid fa-location-dot mr-1"></i>Bulukumba,
+                    Sulawesi Selatan, Indonesia
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mt-2.5">
+                    <span
+                      class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Pemrograman Web</span
+                    >
+                    <span
+                      class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Analisis Sistem</span
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- item tersembunyi -->
+              <div id="more-exp" class="hidden space-y-2">
+                <!-- 5 -->
+                <article
+                  class="tl-item s-item flex gap-4 p-3 -mx-3 rounded-lg hover:bg-li-bg dark:hover:bg-white/5 transition-colors"
+                  data-section="Pengalaman"
+                  data-title="System Analyst — CROP"
+                  data-sub="PT Cakrawala Digital Yaksa · 2019 – 2020"
+                >
+                  <div
+                    class="w-12 h-12 shrink-0 rounded-lg bg-orange-500 text-white grid place-items-center font-bold text-xs shadow-sm"
+                  >
+                    CDY
+                  </div>
+                  <div class="min-w-0">
+                    <h3 class="font-bold text-[15px]">System Analyst — CROP</h3>
+                    <p class="text-sm text-black/70 dark:text-white/70">
+                      PT Cakrawala Digital Yaksa · Penuh waktu
+                    </p>
+                    <p
+                      class="text-[13px] text-black/50 dark:text-white/50 mt-0.5"
+                    >
+                      2019 – 2020 · 1 thn
+                    </p>
+                    <p class="text-[13px] text-black/50 dark:text-white/50">
+                      <i class="fa-solid fa-location-dot mr-1"></i>Bandung,
+                      Indonesia
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 mt-2.5">
+                      <span
+                        class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                        >Analisis Kebutuhan</span
+                      >
+                      <span
+                        class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                        >UML</span
+                      >
+                    </div>
+                  </div>
+                </article>
+
+                <!-- 6 -->
+                <article
+                  class="tl-item s-item flex gap-4 p-3 -mx-3 rounded-lg hover:bg-li-bg dark:hover:bg-white/5 transition-colors"
+                  data-section="Pengalaman"
+                  data-title="System Analyst, Digital Marketing"
+                  data-sub="PT Sobat Teknologi · 2018 (Magang)"
+                >
+                  <div
+                    class="w-12 h-12 shrink-0 rounded-lg bg-sky-600 text-white grid place-items-center font-bold text-xs shadow-sm"
+                  >
+                    SBT
+                  </div>
+                  <div class="min-w-0">
+                    <h3 class="font-bold text-[15px]">
+                      System Analyst &amp; Digital Marketing
+                    </h3>
+                    <p class="text-sm text-black/70 dark:text-white/70">
+                      PT Sobat Teknologi · Magang
+                    </p>
+                    <p
+                      class="text-[13px] text-black/50 dark:text-white/50 mt-0.5"
+                    >
+                      2018 · 3 bln
+                    </p>
+                    <p class="text-[13px] text-black/50 dark:text-white/50">
+                      <i class="fa-solid fa-location-dot mr-1"></i>Bandung,
+                      Indonesia
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 mt-2.5">
+                      <span
+                        class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                        >Digital Marketing</span
+                      >
+                      <span
+                        class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                        >Dokumentasi Sistem</span
+                      >
+                    </div>
+                  </div>
+                </article>
+
+                <!-- 7 -->
+                <article
+                  class="tl-item s-item flex gap-4 p-3 -mx-3 rounded-lg hover:bg-li-bg dark:hover:bg-white/5 transition-colors"
+                  data-section="Pengalaman"
+                  data-title="Programmer, System Analyst"
+                  data-sub="PT Holcim Narogong Plant · 2017 (Magang)"
+                >
+                  <div
+                    class="w-12 h-12 shrink-0 rounded-lg bg-slate-700 text-white grid place-items-center font-bold text-xs shadow-sm"
+                  >
+                    HLC
+                  </div>
+                  <div class="min-w-0">
+                    <h3 class="font-bold text-[15px]">
+                      Programmer &amp; System Analyst
+                    </h3>
+                    <p class="text-sm text-black/70 dark:text-white/70">
+                      PT Holcim Indonesia — Narogong Plant · Magang
+                    </p>
+                    <p
+                      class="text-[13px] text-black/50 dark:text-white/50 mt-0.5"
+                    >
+                      2017 · 3 bln
+                    </p>
+                    <p class="text-[13px] text-black/50 dark:text-white/50">
+                      <i class="fa-solid fa-location-dot mr-1"></i>Cileungsi,
+                      Bogor, Indonesia
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 mt-2.5">
+                      <span
+                        class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                        >PHP</span
+                      >
+                      <span
+                        class="chip text-xs px-2.5 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                        >MySQL</span
+                      >
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <button
+              id="exp-toggle"
+              class="w-full mt-4 py-2.5 rounded-full border border-black/20 dark:border-white/25 text-sm font-semibold text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+            >
+              Tampilkan 3 pengalaman lainnya
+              <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+            </button>
+          </section>
+
+          <!-- ===== PENDIDIKAN ===== 
+               <!--    <section id="pendidikan" class="card bg-white dark:bg-li-card rounded-xl shadow-card dark:shadow-none dark:border dark:border-li-darkline p-4 sm:p-8 scroll-mt-20" data-aos="fade-up">
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap text-li-blue dark:text-li-sky"></i> Pendidikan
+                    </h2>
+                    <div class="space-y-2">
+                        <article class="tl-item s-item flex gap-4 p-3 -mx-3 rounded-lg hover:bg-li-bg dark:hover:bg-white/5 transition-colors"
+                                 data-section="Pendidikan" data-title="S2 Sistem Informasi" data-sub="STMIK Likmi Bandung · 2020">
+                            <div class="w-12 h-12 shrink-0 rounded-lg bg-li-blue text-white grid place-items-center font-bold text-xs shadow-sm">LKM</div>
+                            <div>
+                                <h3 class="font-bold text-[15px]">STMIK Likmi Bandung</h3>
+                                <p class="text-sm text-black/70 dark:text-white/70">S2 — Magister Sistem Informasi</p>
+                                <p class="text-[13px] text-black/50 dark:text-white/50 mt-0.5">Lulus 2020</p>
+                            </div>
+                        </article>
+                        <article class="tl-item s-item flex gap-4 p-3 -mx-3 rounded-lg hover:bg-li-bg dark:hover:bg-white/5 transition-colors"
+                                 data-section="Pendidikan" data-title="D4 Teknik Informatika" data-sub="Politeknik Pos Indonesia Bandung · 2018">
+                            <div class="w-12 h-12 shrink-0 rounded-lg bg-orange-600 text-white grid place-items-center font-bold text-xs shadow-sm">POS</div>
+                            <div>
+                                <h3 class="font-bold text-[15px]">Politeknik Pos Indonesia Bandung</h3>
+                                <p class="text-sm text-black/70 dark:text-white/70">D4 — Teknik Informatika</p>
+                                <p class="text-[13px] text-black/50 dark:text-white/50 mt-0.5">Lulus 2018</p>
+                            </div>
+                        </article>
+                    </div>
+                </section> -->
+
+          <!-- ===== PROYEK ===== -->
+          <section
+            id="proyek"
+            class="card bg-white dark:bg-li-card rounded-xl shadow-card dark:shadow-none dark:border dark:border-li-darkline p-4 sm:p-8 scroll-mt-20"
+            data-aos="fade-up"
+          >
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+              <h2 class="text-xl font-bold flex items-center gap-2">
+                <i
+                  class="fa-solid fa-diagram-project text-li-blue dark:text-li-sky"
+                ></i>
+                Proyek
+              </h2>
+              <div class="flex flex-wrap gap-1.5" id="project-filters">
+                <button
+                  data-filter="all"
+                  class="filter-btn text-xs font-semibold px-3 py-1.5 rounded-full bg-li-blue text-white transition-colors"
+                >
+                  Semua
+                </button>
+                <button
+                  data-filter="perbankan"
+                  class="filter-btn text-xs font-semibold px-3 py-1.5 rounded-full bg-li-bg dark:bg-white/10 text-black/70 dark:text-white/70 hover:bg-li-bluel dark:hover:bg-white/20 transition-colors"
+                >
+                  Perbankan
+                </button>
+                <button
+                  data-filter="enterprise"
+                  class="filter-btn text-xs font-semibold px-3 py-1.5 rounded-full bg-li-bg dark:bg-white/10 text-black/70 dark:text-white/70 hover:bg-li-bluel dark:hover:bg-white/20 transition-colors"
+                >
+                  Enterprise
+                </button>
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4" id="project-grid">
+              <!-- NBDS -->
+              <article
+                class="project-card s-item group cursor-pointer rounded-xl border border-li-line dark:border-li-darkline overflow-hidden lift hover:shadow-cardhover hover:border-li-blue/40"
+                data-cat="perbankan"
+                data-project="nbds"
+                data-section="Proyek"
+                data-title="Project NBDS Release 3.0"
+                data-sub="Bank Mandiri · 5 fitur"
+              >
+                <div
+                  class="relative h-28 bg-gradient-to-br from-[#003d79] to-li-blue text-white p-4 flex items-end"
+                >
+                  <div
+                    class="absolute top-3 right-3 text-3xl opacity-30 group-hover:opacity-60 group-hover:scale-110 transition-all"
+                  >
+                    <i class="fa-solid fa-building-columns"></i>
+                  </div>
+                  <h3 class="font-bold text-[15px] leading-snug">
+                    Project NBDS — Release 3.0
+                  </h3>
+                </div>
+                <div class="p-4">
+                  <p class="text-[13px] text-black/60 dark:text-white/60">
+                    Terlibat pada Project New BDS Release 3.0 dengan
+                    pengembangan fitur di Sprint 6–7.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mt-3">
+                    <span
+                      class="chip text-[11px] px-2 py-0.5 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Debit Card Non-KTP</span
+                    >
+                    <span
+                      class="chip text-[11px] px-2 py-0.5 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Enhancement BOC</span
+                    >
+                    <span
+                      class="chip text-[11px] px-2 py-0.5 rounded-full bg-black/5 dark:bg-white/10 text-black/60 dark:text-white/60 font-medium"
+                      >+3</span
+                    >
+                  </div>
+                  <p
+                    class="mt-3 text-sm font-semibold text-li-blue dark:text-li-sky group-hover:underline"
+                  >
+                    Lihat detail
+                    <i
+                      class="fa-solid fa-arrow-right text-xs ml-0.5 group-hover:translate-x-1 inline-block transition-transform"
+                    ></i>
+                  </p>
+                </div>
+              </article>
+
+              <!-- Octoclicks -->
+              <article
+                class="project-card s-item group cursor-pointer rounded-xl border border-li-line dark:border-li-darkline overflow-hidden lift hover:shadow-cardhover hover:border-li-blue/40"
+                data-cat="perbankan"
+                data-project="octo"
+                data-section="Proyek"
+                data-title="Project OctoClicks"
+                data-sub="CIMB Niaga · 7 fitur ESB"
+              >
+                <div
+                  class="relative h-28 bg-gradient-to-br from-[#8c1d40] to-[#b3245a] text-white p-4 flex items-end"
+                >
+                  <div
+                    class="absolute top-3 right-3 text-3xl opacity-30 group-hover:opacity-60 group-hover:scale-110 transition-all"
+                  >
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                  </div>
+                  <h3 class="font-bold text-[15px] leading-snug">
+                    Project OctoClicks
+                  </h3>
+                </div>
+                <div class="p-4">
+                  <p class="text-[13px] text-black/60 dark:text-white/60">
+                    IT Middleware / Integration Analyst di ESB untuk kanal
+                    digital OctoClicks CIMB Niaga.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mt-3">
+                    <span
+                      class="chip text-[11px] px-2 py-0.5 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Tabungan Emas Pegadaian</span
+                    >
+                    <span
+                      class="chip text-[11px] px-2 py-0.5 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >PGN Prepaid</span
+                    >
+                    <span
+                      class="chip text-[11px] px-2 py-0.5 rounded-full bg-black/5 dark:bg-white/10 text-black/60 dark:text-white/60 font-medium"
+                      >+5</span
+                    >
+                  </div>
+                  <p
+                    class="mt-3 text-sm font-semibold text-li-blue dark:text-li-sky group-hover:underline"
+                  >
+                    Lihat detail
+                    <i
+                      class="fa-solid fa-arrow-right text-xs ml-0.5 group-hover:translate-x-1 inline-block transition-transform"
+                    ></i>
+                  </p>
+                </div>
+              </article>
+
+              <!-- CROP -->
+              <article
+                class="project-card s-item group cursor-pointer rounded-xl border border-li-line dark:border-li-darkline overflow-hidden lift hover:shadow-cardhover hover:border-li-blue/40 sm:col-span-2"
+                data-cat="enterprise"
+                data-project="crop"
+                data-section="Proyek"
+                data-title="Project CROP"
+                data-sub="Cakrawala Digital Yaksa · 3 aplikasi"
+              >
+                <div
+                  class="relative h-28 bg-gradient-to-br from-orange-500 to-amber-600 text-white p-4 flex items-end"
+                >
+                  <div
+                    class="absolute top-3 right-3 text-3xl opacity-30 group-hover:opacity-60 group-hover:scale-110 transition-all"
+                  >
+                    <i class="fa-solid fa-users-gear"></i>
+                  </div>
+                  <h3 class="font-bold text-[15px] leading-snug">
+                    Project CROP — Enterprise Application Suite
+                  </h3>
+                </div>
+                <div class="p-4">
+                  <p class="text-[13px] text-black/60 dark:text-white/60">
+                    Perancangan dan pengembangan tiga aplikasi internal untuk
+                    manajemen pengetahuan, SDM, dan pengadaan.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mt-3">
+                    <span
+                      class="chip text-[11px] px-2 py-0.5 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >Knowledge Management</span
+                    >
+                    <span
+                      class="chip text-[11px] px-2 py-0.5 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >OM-EDIN</span
+                    >
+                    <span
+                      class="chip text-[11px] px-2 py-0.5 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-medium"
+                      >SIPROC</span
+                    >
+                  </div>
+                  <p
+                    class="mt-3 text-sm font-semibold text-li-blue dark:text-li-sky group-hover:underline"
+                  >
+                    Lihat detail
+                    <i
+                      class="fa-solid fa-arrow-right text-xs ml-0.5 group-hover:translate-x-1 inline-block transition-transform"
+                    ></i>
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- ===== KEAHLIAN ===== -->
+          <section
+            id="keahlian"
+            class="card bg-white dark:bg-li-card rounded-xl shadow-card dark:shadow-none dark:border dark:border-li-darkline p-4 sm:p-8 scroll-mt-20"
+            data-aos="fade-up"
+          >
+            <h2 class="text-xl font-bold mb-5 flex items-center gap-2">
+              <i class="fa-solid fa-code text-li-blue dark:text-li-sky"></i>
+              Keahlian &amp; Teknologi
+            </h2>
+
+            <!-- Tab -->
+            <div
+              class="flex gap-6 border-b border-li-line dark:border-li-darkline mb-5 overflow-x-auto"
+              id="skill-tabs"
+            >
+              <button
+                data-tab="dev"
+                class="skill-tab whitespace-nowrap pb-2.5 text-sm font-semibold border-b-2 border-li-blue text-li-blue dark:text-li-sky transition-colors"
+              >
+                Pemrograman
+              </button>
+              <button
+                data-tab="analysis"
+                class="skill-tab whitespace-nowrap pb-2.5 text-sm font-semibold border-b-2 border-transparent text-black/55 dark:text-white/55 hover:text-black dark:hover:text-white transition-colors"
+              >
+                Analisis &amp; Dokumentasi
+              </button>
+              <button
+                data-tab="tools"
+                class="skill-tab whitespace-nowrap pb-2.5 text-sm font-semibold border-b-2 border-transparent text-black/55 dark:text-white/55 hover:text-black dark:hover:text-white transition-colors"
+              >
+                Tools Pengembangan
+              </button>
+              <button
+                data-tab="produktif"
+                class="skill-tab whitespace-nowrap pb-2.5 text-sm font-semibold border-b-2 border-transparent text-black/55 dark:text-white/55 hover:text-black dark:hover:text-white transition-colors"
+              >
+                Produktivitas
+              </button>
+            </div>
+
+            <div id="skill-panels">
+              <div
+                data-panel="dev"
+                class="skill-panel grid sm:grid-cols-2 gap-x-8 gap-y-4"
+              >
+                <div
+                  class="s-item"
+                  data-section="Keahlian"
+                  data-title="HTML, CSS, JavaScript"
+                  data-sub="Pemrograman"
+                >
+                  <div class="flex justify-between text-sm font-semibold mb-1">
+                    <span
+                      ><i class="fa-brands fa-js text-amber-500 mr-2"></i>HTML,
+                      CSS, JavaScript</span
+                    ><span class="text-black/50 dark:text-white/50">90%</span>
+                  </div>
+                  <div
+                    class="skill-bar h-1.5 rounded-full bg-black/10 dark:bg-white/10 overflow-hidden"
+                  >
+                    <span
+                      data-w="90"
+                      class="block h-full rounded-full bg-gradient-to-r from-li-blue to-neon-blue"
+                    ></span>
+                  </div>
+                </div>
+                <div
+                  class="s-item"
+                  data-section="Keahlian"
+                  data-title="SQL"
+                  data-sub="Pemrograman"
+                >
+                  <div class="flex justify-between text-sm font-semibold mb-1">
+                    <span
+                      ><i class="fa-solid fa-database text-sky-600 mr-2"></i
+                      >SQL</span
+                    ><span class="text-black/50 dark:text-white/50">88%</span>
+                  </div>
+                  <div
+                    class="skill-bar h-1.5 rounded-full bg-black/10 dark:bg-white/10 overflow-hidden"
+                  >
+                    <span
+                      data-w="88"
+                      class="block h-full rounded-full bg-gradient-to-r from-li-blue to-neon-blue"
+                    ></span>
+                  </div>
+                </div>
+                <div
+                  class="s-item"
+                  data-section="Keahlian"
+                  data-title="PHP, Node.js"
+                  data-sub="Pemrograman"
+                >
+                  <div class="flex justify-between text-sm font-semibold mb-1">
+                    <span
+                      ><i class="fa-brands fa-php text-indigo-500 mr-2"></i>PHP,
+                      Node.js</span
+                    ><span class="text-black/50 dark:text-white/50">85%</span>
+                  </div>
+                  <div
+                    class="skill-bar h-1.5 rounded-full bg-black/10 dark:bg-white/10 overflow-hidden"
+                  >
+                    <span
+                      data-w="85"
+                      class="block h-full rounded-full bg-gradient-to-r from-li-blue to-neon-blue"
+                    ></span>
+                  </div>
+                </div>
+                <div
+                  class="s-item"
+                  data-section="Keahlian"
+                  data-title="ReactJS, CodeIgniter"
+                  data-sub="Pemrograman"
+                >
+                  <div class="flex justify-between text-sm font-semibold mb-1">
+                    <span
+                      ><i class="fa-brands fa-react text-cyan-500 mr-2"></i
+                      >ReactJS, CodeIgniter</span
+                    ><span class="text-black/50 dark:text-white/50">80%</span>
+                  </div>
+                  <div
+                    class="skill-bar h-1.5 rounded-full bg-black/10 dark:bg-white/10 overflow-hidden"
+                  >
+                    <span
+                      data-w="80"
+                      class="block h-full rounded-full bg-gradient-to-r from-li-blue to-neon-blue"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                data-panel="analysis"
+                class="skill-panel hidden grid-cols-2 sm:grid-cols-4 gap-3"
+              >
+                <div
+                  class="s-item rounded-xl border border-li-line dark:border-li-darkline p-4 text-center lift hover:border-li-blue/50"
+                  data-section="Keahlian"
+                  data-title="UML"
+                  data-sub="Analisis &amp; Dokumentasi"
+                >
+                  <i
+                    class="fa-solid fa-sitemap text-2xl text-li-blue dark:text-li-sky"
+                  ></i>
+                  <p class="mt-2 text-sm font-semibold">UML</p>
+                </div>
+                <div
+                  class="s-item rounded-xl border border-li-line dark:border-li-darkline p-4 text-center lift hover:border-li-blue/50"
+                  data-section="Keahlian"
+                  data-title="Jira"
+                  data-sub="Analisis &amp; Dokumentasi"
+                >
+                  <i class="fa-brands fa-jira text-2xl text-blue-600"></i>
+                  <p class="mt-2 text-sm font-semibold">Jira</p>
+                </div>
+                <div
+                  class="s-item rounded-xl border border-li-line dark:border-li-darkline p-4 text-center lift hover:border-li-blue/50"
+                  data-section="Keahlian"
+                  data-title="Confluence"
+                  data-sub="Analisis &amp; Dokumentasi"
+                >
+                  <i class="fa-brands fa-confluence text-2xl text-blue-500"></i>
+                  <p class="mt-2 text-sm font-semibold">Confluence</p>
+                </div>
+                <div
+                  class="s-item rounded-xl border border-li-line dark:border-li-darkline p-4 text-center lift hover:border-li-blue/50"
+                  data-section="Keahlian"
+                  data-title="Microsoft Visio"
+                  data-sub="Analisis &amp; Dokumentasi"
+                >
+                  <i
+                    class="fa-solid fa-diagram-predecessor text-2xl text-indigo-600"
+                  ></i>
+                  <p class="mt-2 text-sm font-semibold">Visio</p>
+                </div>
+              </div>
+
+              <div
+                data-panel="tools"
+                class="skill-panel hidden grid-cols-2 sm:grid-cols-4 gap-3"
+              >
+                <div
+                  class="s-item rounded-xl border border-li-line dark:border-li-darkline p-4 text-center lift hover:border-li-blue/50"
+                  data-section="Keahlian"
+                  data-title="XAMPP"
+                  data-sub="Tools Pengembangan"
+                >
+                  <i class="fa-solid fa-server text-2xl text-orange-500"></i>
+                  <p class="mt-2 text-sm font-semibold">XAMPP</p>
+                </div>
+                <div
+                  class="s-item rounded-xl border border-li-line dark:border-li-darkline p-4 text-center lift hover:border-li-blue/50"
+                  data-section="Keahlian"
+                  data-title="DBeaver"
+                  data-sub="Tools Pengembangan"
+                >
+                  <i class="fa-solid fa-database text-2xl text-emerald-600"></i>
+                  <p class="mt-2 text-sm font-semibold">DBeaver</p>
+                </div>
+                <div
+                  class="s-item rounded-xl border border-li-line dark:border-li-darkline p-4 text-center lift hover:border-li-blue/50"
+                  data-section="Keahlian"
+                  data-title="Git"
+                  data-sub="Tools Pengembangan"
+                >
+                  <i class="fa-brands fa-git-alt text-2xl text-red-500"></i>
+                  <p class="mt-2 text-sm font-semibold">Git</p>
+                </div>
+                <div
+                  class="s-item rounded-xl border border-li-line dark:border-li-darkline p-4 text-center lift hover:border-li-blue/50"
+                  data-section="Keahlian"
+                  data-title="Draw.io"
+                  data-sub="Tools Pengembangan"
+                >
+                  <i class="fa-solid fa-pen-ruler text-2xl text-amber-600"></i>
+                  <p class="mt-2 text-sm font-semibold">Draw.io</p>
+                </div>
+              </div>
+
+              <div
+                data-panel="produktif"
+                class="skill-panel hidden grid-cols-2 sm:grid-cols-4 gap-3"
+              >
+                <div
+                  class="s-item rounded-xl border border-li-line dark:border-li-darkline p-4 text-center lift hover:border-li-blue/50"
+                  data-section="Keahlian"
+                  data-title="VS Code"
+                  data-sub="Produktivitas"
+                >
+                  <i class="fa-solid fa-code text-2xl text-blue-500"></i>
+                  <p class="mt-2 text-sm font-semibold">VS Code</p>
+                </div>
+                <div
+                  class="s-item rounded-xl border border-li-line dark:border-li-darkline p-4 text-center lift hover:border-li-blue/50"
+                  data-section="Keahlian"
+                  data-title="Postman"
+                  data-sub="Produktivitas"
+                >
+                  <i
+                    class="fa-solid fa-paper-plane text-2xl text-orange-500"
+                  ></i>
+                  <p class="mt-2 text-sm font-semibold">Postman</p>
+                </div>
+                <div
+                  class="s-item rounded-xl border border-li-line dark:border-li-darkline p-4 text-center lift hover:border-li-blue/50"
+                  data-section="Keahlian"
+                  data-title="Google Studio"
+                  data-sub="Produktivitas"
+                >
+                  <i class="fa-brands fa-google text-2xl text-red-500"></i>
+                  <p class="mt-2 text-sm font-semibold">Google Studio</p>
+                </div>
+                <div
+                  class="s-item rounded-xl border border-li-line dark:border-li-darkline p-4 text-center lift hover:border-li-blue/50"
+                  data-section="Keahlian"
+                  data-title="Canva"
+                  data-sub="Produktivitas"
+                >
+                  <i class="fa-solid fa-palette text-2xl text-cyan-500"></i>
+                  <p class="mt-2 text-sm font-semibold">Canva</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===== KONTAK ===== -->
+          <section
+            id="kontak"
+            class="card bg-white dark:bg-li-card rounded-xl shadow-card dark:shadow-none dark:border dark:border-li-darkline p-4 sm:p-8 scroll-mt-20"
+            data-aos="fade-up"
+          >
+            <h2 class="text-xl font-bold mb-1 flex items-center gap-2">
+              <i
+                class="fa-solid fa-address-book text-li-blue dark:text-li-sky"
+              ></i>
+              Informasi Kontak
+            </h2>
+            <p class="text-sm text-black/60 dark:text-white/60 mb-5">
+              Mari berkolaborasi untuk menciptakan inovasi teknologi. Klik ikon
+              salin untuk menyalin detail.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div
+                class="group flex items-center gap-3 p-3 rounded-lg border border-li-line dark:border-li-darkline lift hover:border-li-blue/50"
+              >
+                <div
+                  class="w-11 h-11 shrink-0 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky grid place-items-center"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-xs text-black/50 dark:text-white/50">Email</p>
+                  <a
+                    href="mailto:bayu.rizki@uin-alauddin.ac.id"
+                    class="text-sm font-semibold hover:text-li-blue dark:hover:text-li-sky break-all"
+                    >bayu.rizki@uin-alauddin.ac.id</a
+                  >
+                </div>
+                <button
+                  class="copy-btn w-9 h-9 rounded-full grid place-items-center text-black/40 dark:text-white/40 hover:bg-li-bluel dark:hover:bg-white/10 hover:text-li-blue dark:hover:text-li-sky transition-colors"
+                  data-copy="bayu.rizki@uin-alauddin.ac.id"
+                  title="Salin email"
+                >
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+
+              <div
+                class="group flex items-center gap-3 p-3 rounded-lg border border-li-line dark:border-li-darkline lift hover:border-li-blue/50"
+              >
+                <div
+                  class="w-11 h-11 shrink-0 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky grid place-items-center"
+                >
+                  <i class="fa-solid fa-mobile-screen"></i>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-xs text-black/50 dark:text-white/50">
+                    Telepon / WhatsApp
+                  </p>
+                  <a
+                    href="https://wa.me/628979116836"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-sm font-semibold hover:text-li-blue dark:hover:text-li-sky"
+                    >+62 897 9116 836</a
+                  >
+                </div>
+                <button
+                  class="copy-btn w-9 h-9 rounded-full grid place-items-center text-black/40 dark:text-white/40 hover:bg-li-bluel dark:hover:bg-white/10 hover:text-li-blue dark:hover:text-li-sky transition-colors"
+                  data-copy="+62 897 9116 836"
+                  title="Salin nomor"
+                >
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+
+              <div
+                class="group flex items-center gap-3 p-3 rounded-lg border border-li-line dark:border-li-darkline lift hover:border-li-blue/50"
+              >
+                <div
+                  class="w-11 h-11 shrink-0 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky grid place-items-center"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-xs text-black/50 dark:text-white/50">
+                    LinkedIn
+                  </p>
+                  <a
+                    href="https://www.linkedin.com/in/bayu-rizki-94913a171"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-sm font-semibold hover:text-li-blue dark:hover:text-li-sky break-all"
+                    >in/bayu-rizki-94913a171</a
+                  >
+                </div>
+                <button
+                  class="copy-btn w-9 h-9 rounded-full grid place-items-center text-black/40 dark:text-white/40 hover:bg-li-bluel dark:hover:bg-white/10 hover:text-li-blue dark:hover:text-li-sky transition-colors"
+                  data-copy="https://www.linkedin.com/in/bayu-rizki-94913a171"
+                  title="Salin tautan"
+                >
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+
+              <div
+                class="group flex items-center gap-3 p-3 rounded-lg border border-li-line dark:border-li-darkline lift hover:border-li-blue/50"
+              >
+                <div
+                  class="w-11 h-11 shrink-0 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky grid place-items-center"
+                >
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-xs text-black/50 dark:text-white/50">
+                    Alamat Kantor
+                  </p>
+                  <p class="text-sm font-semibold leading-snug">
+                    Fak. Adab &amp; Humaniora, Jur. Ilmu Perpustakaan<br />UIN
+                    Alauddin Makassar — Gowa, Sulsel
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl font-bold text-navy mb-4">Tentang Saya</h2>
-                <div class="w-24 h-1 bg-neon-blue mx-auto"></div>
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="lg:col-span-4 min-w-0 space-y-4 lg:space-y-6">
+          <div class="lg:sticky lg:top-20 space-y-4 lg:space-y-6">
+            <!-- Navigasi cepat -->
+            <div
+              class="card bg-white dark:bg-li-card rounded-xl shadow-card dark:shadow-none dark:border dark:border-li-darkline p-5 no-print"
+              data-aos="fade-up"
+            >
+              <p class="font-bold text-sm mb-3">Navigasi Profil</p>
+              <nav class="space-y-1 text-sm">
+                <a
+                  href="#tentang"
+                  data-nav="tentang"
+                  class="side-link flex items-center gap-3 px-3 py-2 rounded-lg text-black/70 dark:text-white/70 hover:bg-li-bg dark:hover:bg-white/5 transition-colors"
+                  ><i class="fa-solid fa-user w-4 text-center"></i> Tentang</a
+                >
+                <a
+                  href="#pengalaman"
+                  data-nav="pengalaman"
+                  class="side-link flex items-center gap-3 px-3 py-2 rounded-lg text-black/70 dark:text-white/70 hover:bg-li-bg dark:hover:bg-white/5 transition-colors"
+                  ><i class="fa-solid fa-briefcase w-4 text-center"></i>
+                  Pengalaman
+                  <span class="ml-auto text-xs text-black/40 dark:text-white/40"
+                    >7</span
+                  ></a
+                >
+                <!-- <a
+                  href="#pendidikan"
+                  data-nav="pendidikan"
+                  class="side-link flex items-center gap-3 px-3 py-2 rounded-lg text-black/70 dark:text-white/70 hover:bg-li-bg dark:hover:bg-white/5 transition-colors"
+                  ><i class="fa-solid fa-graduation-cap w-4 text-center"></i>
+                  Pendidikan
+                  <span class="ml-auto text-xs text-black/40 dark:text-white/40"
+                    >2</span
+                  ></a
+                > -->
+                <a
+                  href="#proyek"
+                  data-nav="proyek"
+                  class="side-link flex items-center gap-3 px-3 py-2 rounded-lg text-black/70 dark:text-white/70 hover:bg-li-bg dark:hover:bg-white/5 transition-colors"
+                  ><i class="fa-solid fa-diagram-project w-4 text-center"></i>
+                  Proyek
+                  <span class="ml-auto text-xs text-black/40 dark:text-white/40"
+                    >3</span
+                  ></a
+                >
+                <a
+                  href="#keahlian"
+                  data-nav="keahlian"
+                  class="side-link flex items-center gap-3 px-3 py-2 rounded-lg text-black/70 dark:text-white/70 hover:bg-li-bg dark:hover:bg-white/5 transition-colors"
+                  ><i class="fa-solid fa-code w-4 text-center"></i> Keahlian
+                  <span class="ml-auto text-xs text-black/40 dark:text-white/40"
+                    >16</span
+                  ></a
+                >
+                <a
+                  href="#kontak"
+                  data-nav="kontak"
+                  class="side-link flex items-center gap-3 px-3 py-2 rounded-lg text-black/70 dark:text-white/70 hover:bg-li-bg dark:hover:bg-white/5 transition-colors"
+                  ><i class="fa-solid fa-envelope w-4 text-center"></i>
+                  Kontak</a
+                >
+              </nav>
             </div>
-            <div class="grid md:grid-cols-1 gap-12 items-center">
-                <div class="text-center fade-in">
-                    <div class="bg-gradient-to-br from-navy to-navy-dark p-8 rounded-2xl text-white">
-                        <div class="text-6xl mb-4">🎯</div> 
-                        <h3 class="text-2xl font-bold mb-4">Ringkasan </h3>
-                        <p class="text-gray-200 leading-relaxed">
-                            Bayu Rizki - Sangat tertarik dan ingin terus berkembang dalam bidang pengembangan aplikasi, terutama dalam bidang IT. Saya percaya bahwa pembelajaran adalah proses seumur hidup, sehingga saya terus mengembangkan keahlian dalam bidang sistem informasi, data mining, dan integrasi teknologi. Saya siap berkontribusi melalui inovasi dan solusi berbasis teknologi di lingkungan akademik maupun industri.
-                        </p>
-                        <hr class="my-6 border-gray-300">
-                        <div class="text-6xl mb-4">🔬</div> 
-                        <h4 class="text-2xl font-bold mb-4">Spesialisasi</h4>
-                        <p class="ext-gray-200 leading-relaxed">Programmer, System Analyst, Integration Analyst, Data Mining</p>
-                    </div>
+
+            <!-- Bidang minat -->
+            <div
+              class="card bg-white dark:bg-li-card rounded-xl shadow-card dark:shadow-none dark:border dark:border-li-darkline p-5"
+              data-aos="fade-up"
+            >
+              <p class="font-bold text-sm mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-lightbulb text-amber-500"></i> Bidang
+                Minat
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="chip text-xs px-3 py-1.5 rounded-full bg-li-bg dark:bg-white/10 font-medium"
+                  >Sistem Informasi</span
+                >
+                <span
+                  class="chip text-xs px-3 py-1.5 rounded-full bg-li-bg dark:bg-white/10 font-medium"
+                  >Data Mining</span
+                >
+                <span
+                  class="chip text-xs px-3 py-1.5 rounded-full bg-li-bg dark:bg-white/10 font-medium"
+                  >Integrasi Teknologi</span
+                >
+                <span
+                  class="chip text-xs px-3 py-1.5 rounded-full bg-li-bg dark:bg-white/10 font-medium"
+                  >Enterprise Service Bus</span
+                >
+                <span
+                  class="chip text-xs px-3 py-1.5 rounded-full bg-li-bg dark:bg-white/10 font-medium"
+                  >Pengembangan Aplikasi</span
+                >
+                <span
+                  class="chip text-xs px-3 py-1.5 rounded-full bg-li-bg dark:bg-white/10 font-medium"
+                  >Literasi Informasi</span
+                >
+              </div>
+            </div>
+
+            <!-- Industri yang pernah digeluti -->
+            <div
+              class="card bg-white dark:bg-li-card rounded-xl shadow-card dark:shadow-none dark:border dark:border-li-darkline p-5"
+              data-aos="fade-up"
+            >
+              <p class="font-bold text-sm mb-3 flex items-center gap-2">
+                <i
+                  class="fa-solid fa-industry text-li-blue dark:text-li-sky"
+                ></i>
+                Lintas Industri
+              </p>
+              <div class="space-y-3 text-sm">
+                <div class="flex items-center gap-3">
+                  <span
+                    class="w-9 h-9 rounded-lg bg-emerald-600 text-white grid place-items-center text-[10px] font-bold"
+                    >EDU</span
+                  >
+                  <div>
+                    <p class="font-semibold leading-tight">Pendidikan Tinggi</p>
+                    <p class="text-xs text-black/50 dark:text-white/50">
+                      UIN Alauddin · STMIK Bina Adinata
+                    </p>
+                  </div>
                 </div>
-                <!-- <div class="fade-in">
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-neon-blue/20 rounded-full flex items-center justify-center">
-                                <span class="text-neon-blue text-xl">📚</span>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-navy">Pendidikan</h4>
-                                <p class="text-gray-600"> D4 Teknik Informatika - Politeknik Pos Indonesia Bandung, 2018 </p>
-                                <p class="text-gray-600"> S2 Sistem Informasi - STMIK Likmi Bandung, 2020</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-neon-blue/20 rounded-full flex items-center justify-center">
-                                <span class="text-neon-blue text-xl">🏢</span>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-navy">Institusi</h4>
-                                <p class="text-gray-600">Universitas Indonesia - Fakultas Ilmu Komputer</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-neon-blue/20 rounded-full flex items-center justify-center">
-                                <span class="text-neon-blue text-xl">🔬</span>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-navy">Spesialisasi</h4>
-                                <p class="text-gray-600">Programmer, System Analyst, Integration Analyst, Data Mining</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-neon-blue/20 rounded-full flex items-center justify-center">
-                                <span class="text-neon-blue text-xl">⏱️</span>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-navy">Pengalaman</h4>
-                                <p class="text-gray-600">15+ tahun dalam akademik dan industri</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>  -->
+                <div class="flex items-center gap-3">
+                  <span
+                    class="w-9 h-9 rounded-lg bg-li-blue text-white grid place-items-center text-[10px] font-bold"
+                    >FIN</span
+                  >
+                  <div>
+                    <p class="font-semibold leading-tight">Perbankan</p>
+                    <p class="text-xs text-black/50 dark:text-white/50">
+                      Bank Mandiri · CIMB Niaga
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span
+                    class="w-9 h-9 rounded-lg bg-orange-500 text-white grid place-items-center text-[10px] font-bold"
+                    >TEC</span
+                  >
+                  <div>
+                    <p class="font-semibold leading-tight">
+                      Teknologi &amp; Manufaktur
+                    </p>
+                    <p class="text-xs text-black/50 dark:text-white/50">
+                      Cakrawala Digital Yaksa · Sobat Teknologi · Holcim
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <!-- CTA -->
+            <div
+              class="card rounded-xl overflow-hidden shadow-card dark:shadow-none dark:border dark:border-li-darkline bg-gradient-to-br from-li-blue to-li-blueh text-white p-5 no-print"
+              data-aos="fade-up"
+            >
+              <p class="font-bold">Ada proyek atau riset?</p>
+              <p class="text-sm opacity-90 mt-1">
+                Terbuka untuk diskusi kolaborasi akademik maupun industri.
+              </p>
+              <a
+                href="mailto:bayu.rizki@uin-alauddin.ac.id"
+                class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-li-blue text-sm font-bold hover:bg-white/90 transition-colors"
+              >
+                <i class="fa-solid fa-paper-plane"></i> Mulai percakapan
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer
+      class="border-t border-li-line dark:border-li-darkline bg-white dark:bg-li-card py-10 mb-14 lg:mb-0"
+    >
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <div
+          class="w-12 h-12 mx-auto rounded-xl bg-li-blue text-white grid place-items-center font-extrabold mb-3"
+        >
+          BR
         </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl font-bold text-navy mb-4">Pengalaman</h2>
-                <div class="w-24 h-1 bg-neon-blue mx-auto"></div>
-            </div>
-            <div class="max-w-4xl mx-auto">
-                <div class="space-y-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover-glow">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                            <h3 class="text-xl font-bold text-navy">(C)PNS Dosen Asisten Ahli - Jurusan Ilmu Perpustakaan</h3>
-                            <span class="text-neon-blue font-semibold">2025 - Sekarang</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Fakultas Adab dan Humaniora UIN Alauddin Makassar -  Gowa, Indonesia </p>
-                        <!-- <ul class="text-gray-700 space-y-2">
-                            <li></li>
-                            <li>• Membimbing 25+ mahasiswa S2 dan S3</li>
-                            <li>• Memimpin tim penelitian AI untuk Smart City</li>
-                        </ul> -->
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover-glow">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                            <h3 class="text-xl font-bold text-navy">IT Integration Analyst - IT Digital Branch Channel Delivery</h3>
-                            <span class="text-neon-blue font-semibold">2024 - 2025</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">PT Bank Mandiri Tbk -  Jakarta, Indonesia </p>
-                        <!-- <ul class="text-gray-700 space-y-2">
-                            <li></li>
-                            <li>• Membimbing 25+ mahasiswa S2 dan S3</li>
-                            <li>• Memimpin tim penelitian AI untuk Smart City</li>
-                        </ul> -->
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover-glow">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                            <h3 class="text-xl font-bold text-navy">IT Middleware, IA - ESB</h3>
-                            <span class="text-neon-blue font-semibold">2022 - 2024</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">PT Bank CIMB NIAGA, TBK - Bintaro Tangsel - Indonesia</p>
-                        <!-- <ul class="text-gray-700 space-y-2">
-                            <li>• Mengembangkan kurikulum berbasis industri 4.0</li>
-                            <li>• Kolaborasi penelitian dengan Google dan Microsoft</li>
-                            <li>• Publikasi 30+ paper di jurnal internasional</li>
-                        </ul> -->
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover-glow">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                            <h3 class="text-xl font-bold text-navy">Lecture, S1 Sistem Informasi</h3>
-                            <span class="text-neon-blue font-semibold">2020 - 2021</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">STMIK Bina Adinata Bulukumba - Indonesia</p>
-                        <!-- <ul class="text-gray-700 space-y-2">
-                            <li>• Mengembangkan kurikulum berbasis industri 4.0</li>
-                            <li>• Kolaborasi penelitian dengan Google dan Microsoft</li>
-                            <li>• Publikasi 30+ paper di jurnal internasional</li>
-                        </ul> -->
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover-glow">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                            <h3 class="text-xl font-bold text-navy">System Analyst - CROP</h3>
-                            <span class="text-neon-blue font-semibold">2019 - 2020</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">PT Cakrawala Digital Yaksa - Bandung, Indonesia</p>
-                        <!-- <ul class="text-gray-700 space-y-2">
-                            <li>• Mengembangkan kurikulum berbasis industri 4.0</li>
-                            <li>• Kolaborasi penelitian dengan Google dan Microsoft</li>
-                            <li>• Publikasi 30+ paper di jurnal internasional</li>
-                        </ul> -->
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover-glow">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                            <h3 class="text-xl font-bold text-navy">System Analyst ,  Digital Marketing</h3>
-                            <span class="text-neon-blue font-semibold">2018 (Internship Program - 3 M) </span>
-                        </div>
-                        <p class="text-gray-600 mb-4">PT Sobat Teknologi - Bandung, Indonesia</p>
-                        <!-- <ul class="text-gray-700 space-y-2">
-                            <li>• Mengembangkan kurikulum berbasis industri 4.0</li>
-                            <li>• Kolaborasi penelitian dengan Google dan Microsoft</li>
-                            <li>• Publikasi 30+ paper di jurnal internasional</li>
-                        </ul> -->
-                    </div>
-                       <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover-glow">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                            <h3 class="text-xl font-bold text-navy">Programmer , System Analyst</h3>
-                            <span class="text-neon-blue font-semibold">2017 (Internship Program 1 - 3 M) </span> 
-                        </div>
-                        <p class="text-gray-600 mb-4">PT Holcim Narogong Plant - Cileungsi Bogor, Indonesia</p>
-                        <!-- <ul class="text-gray-700 space-y-2">
-                            <li>• Mengembangkan kurikulum berbasis industri 4.0</li>
-                            <li>• Kolaborasi penelitian dengan Google dan Microsoft</li>
-                            <li>• Publikasi 30+ paper di jurnal internasional</li>
-                        </ul> -->
-                    </div>
-                    <!-- <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover-glow">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                            <h3 class="text-xl font-bold text-navy">AI Research Consultant</h3>
-                            <span class="text-neon-blue font-semibold">2018 - Sekarang</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">PT. Teknologi Nusantara</p>
-                        <ul class="text-gray-700 space-y-2">
-                            <li>• Konsultasi implementasi AI untuk BUMN</li>
-                            <li>• Pengembangan sistem prediktif analytics</li>
-                            <li>• Training AI untuk 500+ profesional</li>
-                        </ul>
-                    </div> -->
-                </div>
-            </div>
+        <p class="font-bold">Bayu Rizki</p>
+        <p class="text-sm text-black/55 dark:text-white/55">
+          IT Enthusiast · System &amp; Integration Analyst · Dosen
+        </p>
+        <div class="flex justify-center gap-2 mt-5 no-print">
+          <a
+            href="mailto:bayu.rizki@uin-alauddin.ac.id"
+            title="Email"
+            class="w-10 h-10 rounded-full border border-li-line dark:border-li-darkline grid place-items-center text-black/60 dark:text-white/60 hover:bg-li-blue hover:text-white hover:border-li-blue transition-all"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/bayu-rizki-94913a171"
+            target="_blank"
+            rel="noopener"
+            title="LinkedIn"
+            class="w-10 h-10 rounded-full border border-li-line dark:border-li-darkline grid place-items-center text-black/60 dark:text-white/60 hover:bg-li-blue hover:text-white hover:border-li-blue transition-all"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://wa.me/628979116836"
+            target="_blank"
+            rel="noopener"
+            title="WhatsApp"
+            class="w-10 h-10 rounded-full border border-li-line dark:border-li-darkline grid place-items-center text-black/60 dark:text-white/60 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition-all"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://github.com/baimempatlima"
+            target="_blank"
+            rel="noopener"
+            title="GitHub"
+            class="w-10 h-10 rounded-full border border-li-line dark:border-li-darkline grid place-items-center text-black/60 dark:text-white/60 hover:bg-black hover:text-white hover:border-black transition-all"
+            ><i class="fa-brands fa-github"></i
+          ></a>
         </div>
-    </section>
-
-
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl font-bold text-navy mb-4">Projects & Portfolio</h2>
-                <div class="w-24 h-1 bg-neon-blue mx-auto"></div>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover-glow">
-                    <div class="bg-gradient-to-br from-navy to-navy-dark p-8 text-white text-center">
-                        <div class="text-4xl mb-4">🏦</div>
-                        <h3 class="text-xl font-bold">Project NBDS - Relase 3.0</h3>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">Teribat dalam Project NewBDS Release 3.0 IT terdapat beberapa pengembangan fitur diSprint 6 - 7 yaitu: </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm">Debit Card for  Non ID KTP</span>
-                            <span class="bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm">Enhancement BOC - Kelola Kartu</span>
-                            <span class="bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm">Identifikasi Non Perorangan</span>
-                            <span class="bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm">Customer Data Maintenance Non Perorangan</span>
-                            <span class="bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm">Jual Beli Valas Non Perorangan </span>
-                            
-                        </div>
-                        <!-- <button class="text-navy font-semibold hover:text-neon-blue transition-colors duration-300">
-                            Lihat Detail →
-                        </button> -->
-                    </div>
-                </div>
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover-glow">
-                    <div class="bg-gradient-to-br from-navy to-navy-dark p-8 text-white text-center">
-                        <div class="text-4xl mb-4">💰</div>
-                        <h3 class="text-xl font-bold">Project Octoclics</h3>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">Terlibat dalam Project Octoclicks CIMB NIaga sebagai IT Middleware IA di ESB, beberapa pengembangan fitur yaitu: </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm">Opening Junior Indie</span>
-                            <span class="bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm">Tabungan Emas OCI - Pegadaian</span>
-                            <span class="bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm">PGN Prepaid OCI</span>
-                            <span class="bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm">Sunlife OCI</span>
-                            <span class="bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm">Ultra Voucher OCI</span>
-                            <span class="bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm">Leisure TrainTicket OCI - Tiket.com</span>
-                            <span class="bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm">PointXtra OCI</span>
-                        </div>
-                        <!-- <button class="text-navy font-semibold hover:text-neon-blue transition-colors duration-300">
-                            Lihat Detail →
-                        </button> -->
-                    </div>
-                </div>
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in hover-glow">
-                    <div class="bg-gradient-to-br from-navy to-navy-dark p-8 text-white text-center">
-                        <div class="text-4xl mb-4">👥</div>
-                        <h3 class="text-xl font-bold">Project - Crop</h3>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">Beberapa keterlibatan perancangan dan pengembangan aplikasi di Project CROP  yaitu : </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm">Aplikasi Knowledge Management (KM)</span>
-                            <span class="bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm">Aplikasi Organizational Management & Employee Development Identification Needs (OM-EDIN)</span>
-                            <span class="bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm">Sistem Informasi Procurement SIPROC</span>
-                        </div>
-                        <!-- <button class="text-navy font-semibold hover:text-neon-blue transition-colors duration-300">
-                            Lihat Detail →
-                        </button> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl font-bold text-navy mb-4">Keahlian & Teknologi</h2>
-                <div class="w-24 h-1 bg-neon-blue mx-auto"></div>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center fade-in">
-                    <div class="bg-gradient-to-br from-navy to-navy-dark p-8 rounded-2xl text-white mb-6">
-                        <div class="text-4xl mb-4"> 💻</div>
-                        <h3 class="text-xl font-bold">Programming</h3>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="bg-gray-100 rounded-full p-3 hover:bg-neon-blue/20 transition-colors duration-300">HTML,CSS, Javascript</div>
-                        <div class="bg-gray-100 rounded-full p-3 hover:bg-neon-blue/20 transition-colors duration-300">SQL</div>
-                        <div class="bg-gray-100 rounded-full p-3 hover:bg-neon-blue/20 transition-colors duration-300">PHP, NodeJS</div>
-                        <div class="bg-gray-100 rounded-full p-3 hover:bg-neon-blue/20 transition-colors duration-300">ReactJS, CodeIgniter</div>
-                    </div>
-                </div>
-                <div class="text-center fade-in">
-                    <div class="bg-gradient-to-br from-navy to-navy-dark p-8 rounded-2xl text-white mb-6">
-                        <div class="text-4xl mb-4">☁️</div>
-                        <h3 class="text-xl font-bold">Tools</h3>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="bg-gray-100 rounded-full p-3 hover:bg-neon-blue/20 transition-colors duration-300">UML</div>
-                        <div class="bg-gray-100 rounded-full p-3 hover:bg-neon-blue/20 transition-colors duration-300">Jira</div>
-                        <div class="bg-gray-100 rounded-full p-3 hover:bg-neon-blue/20 transition-colors duration-300">Confluence</div>
-                        <div class="bg-gray-100 rounded-full p-3 hover:bg-neon-blue/20 transition-colors duration-300">Visio</div>
-                    </div>
-                </div>
-                <div class="text-center fade-in">
-                    <div class="bg-gradient-to-br from-navy to-navy-dark p-8 rounded-2xl text-white mb-6">
-                        <div class="text-4xl mb-4">☁️</div>
-                        <h3 class="text-xl font-bold">Tools</h3>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="bg-gray-100 rounded-full p-3 hover:bg-neon-blue/20 transition-colors duration-300">Xampp</div>
-                        <div class="bg-gray-100 rounded-full p-3 hover:bg-neon-blue/20 transition-colors duration-300">Dbeaver</div>
-                        <div class="bg-gray-100 rounded-full p-3 hover:bg-neon-blue/20 transition-colors duration-300">Git</div>
-                        <div class="bg-gray-100 rounded-full p-3 hover:bg-neon-blue/20 transition-colors duration-300">Draw.io</div>
-                    </div>
-                </div>
-                  <div class="text-center fade-in">
-                    <div class="bg-gradient-to-br from-navy to-navy-dark p-8 rounded-2xl text-white mb-6">
-                        <div class="text-4xl mb-4">☁️</div>
-                        <h3 class="text-xl font-bold">Tools</h3>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="bg-gray-100 rounded-full p-3 hover:bg-neon-blue/20 transition-colors duration-300">VSCode</div>
-                        <div class="bg-gray-100 rounded-full p-3 hover:bg-neon-blue/20 transition-colors duration-300">Postman</div>
-                        <div class="bg-gray-100 rounded-full p-3 hover:bg-neon-blue/20 transition-colors duration-300">Google Studio</div>
-                        <div class="bg-gray-100 rounded-full p-3 hover:bg-neon-blue/20 transition-colors duration-300">Canva</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 gradient-bg text-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl font-bold mb-4">Hubungi Saya</h2>
-                <div class="w-24 h-1 bg-neon-blue mx-auto"></div>
-                <p class="text-xl mt-6 opacity-90">Mari berkolaborasi untuk menciptakan inovasi teknologi</p>
-            </div>
-            <div class="max-w-4xl mx-auto">
-                <div class="fade-in">
-                    <h3 class="text-2xl font-bold mb-8 text-center">Informasi Kontak</h3>
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-neon-blue/20 rounded-full flex items-center justify-center">
-                                <span class="text-neon-blue text-xl">📧</span>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">Email</h4>
-                                <p class="text-gray-200">bayu.rizki@uin-alauddin.ac.id</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-neon-blue/20 rounded-full flex items-center justify-center">
-                                <span class="text-neon-blue text-xl">📱</span>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">Handphone</h4>
-                                <p class="text-gray-200">+62 89 7911 6836</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-neon-blue/20 rounded-full flex items-center justify-center">
-                                <span class="text-neon-blue text-xl">📍</span>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">Alamat Kantor</h4>
-                                <p class="text-gray-200">Fakultas Adab dan Humaniora, Jurusan Ilmu Perpustakaan UIN Alauddin Makassar <br>, Gowa Sulsel</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-neon-blue/20 rounded-full flex items-center justify-center">
-                                <span class="text-neon-blue text-xl">💼</span>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">LinkedIn</h4>
-                                <p class="text-gray-200">linkedin.com/in/bayu-rizki-94913a171</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-navy text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="text-center">
-                <h3 class="text-2xl font-bold mb-4">Bayu Rizki</h3>
-                <p class="text-gray-300 mb-6">IT Enthusiast</p>
-                <div class="flex justify-center space-x-6 mb-8">
-                    <a href="#" class="text-gray-300 hover:text-neon-blue transition-colors duration-300">📧 Email</a>
-                    <a href="#" class="text-gray-300 hover:text-neon-blue transition-colors duration-300">💼 LinkedIn</a>
-                    <a href="#" class="text-gray-300 hover:text-neon-blue transition-colors duration-300">🐙 GitHub</a>
-                    <a href="#" class="text-gray-300 hover:text-neon-blue transition-colors duration-300">📚 ResearchGate</a>
-                </div>
-                <div class="border-t border-gray-700 pt-8">
-                    <p class="text-gray-400">&copy; 2025 Bayu Rizki. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
+        <p class="text-xs text-black/45 dark:text-white/45 mt-6">
+          &copy; <span id="year">2026</span> Bayu Rizki. Seluruh hak cipta
+          dilindungi.
+        </p>
+      </div>
     </footer>
 
+    <!-- ===== BOTTOM NAV (MOBILE) ===== -->
+    <nav
+      id="bottom-nav"
+      class="lg:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 dark:bg-li-card/95 backdrop-blur border-t border-li-line dark:border-li-darkline"
+    >
+      <div class="grid grid-cols-5">
+        <a
+          href="#profil"
+          data-nav="profil"
+          class="nav-link flex flex-col items-center py-2 text-[10px] text-black/55 dark:text-white/55"
+          ><i class="fa-solid fa-house text-lg mb-0.5"></i>Beranda</a
+        >
+        <a
+          href="#pengalaman"
+          data-nav="pengalaman"
+          class="nav-link flex flex-col items-center py-2 text-[10px] text-black/55 dark:text-white/55"
+          ><i class="fa-solid fa-briefcase text-lg mb-0.5"></i>Karier</a
+        >
+        <a
+          href="#proyek"
+          data-nav="proyek"
+          class="nav-link flex flex-col items-center py-2 text-[10px] text-black/55 dark:text-white/55"
+          ><i class="fa-solid fa-diagram-project text-lg mb-0.5"></i>Proyek</a
+        >
+        <a
+          href="#keahlian"
+          data-nav="keahlian"
+          class="nav-link flex flex-col items-center py-2 text-[10px] text-black/55 dark:text-white/55"
+          ><i class="fa-solid fa-code text-lg mb-0.5"></i>Keahlian</a
+        >
+        <a
+          href="#kontak"
+          data-nav="kontak"
+          class="nav-link flex flex-col items-center py-2 text-[10px] text-black/55 dark:text-white/55"
+          ><i class="fa-solid fa-envelope text-lg mb-0.5"></i>Kontak</a
+        >
+      </div>
+    </nav>
+
+    <!-- Tombol kembali ke atas -->
+    <button
+      id="to-top"
+      class="hidden fixed bottom-20 lg:bottom-6 right-4 z-40 w-11 h-11 rounded-full bg-li-blue hover:bg-li-blueh text-white shadow-pop grid place-items-center transition-colors"
+      title="Kembali ke atas"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ===== MODAL PROYEK ===== -->
+    <div
+      id="modal"
+      class="hidden fixed inset-0 z-[70] items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+    >
+      <div
+        id="modal-box"
+        class="w-full max-w-2xl max-h-[85vh] overflow-auto bg-white dark:bg-li-card rounded-2xl shadow-pop animate-pop"
+      >
+        <div
+          id="modal-head"
+          class="relative p-6 pr-16 text-white bg-gradient-to-br from-li-blue to-li-blueh"
+        >
+          <button
+            id="modal-close"
+            class="absolute z-10 top-4 right-4 w-9 h-9 rounded-full bg-white/20 hover:bg-white/35 grid place-items-center transition-colors"
+            aria-label="Tutup"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <p
+            id="modal-company"
+            class="text-xs uppercase tracking-wider opacity-80"
+          ></p>
+          <h3 id="modal-title" class="text-2xl font-bold mt-1"></h3>
+          <p id="modal-role" class="text-sm opacity-90 mt-1"></p>
+        </div>
+        <div class="p-6">
+          <p
+            id="modal-desc"
+            class="text-[15px] text-black/70 dark:text-white/70"
+          ></p>
+          <p class="mt-5 mb-2 text-sm font-bold">
+            Fitur &amp; modul yang dikerjakan
+          </p>
+          <ul id="modal-list" class="space-y-2 text-sm"></ul>
+          <div id="modal-tech" class="flex flex-wrap gap-2 mt-5"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div
+      id="toast"
+      class="fixed bottom-24 lg:bottom-6 left-1/2 -translate-x-1/2 z-[80] hidden"
+    >
+      <div
+        class="px-4 py-2.5 rounded-full bg-black/85 dark:bg-white text-white dark:text-black text-sm font-semibold shadow-pop flex items-center gap-2"
+      >
+        <i
+          class="fa-solid fa-circle-check text-emerald-400 dark:text-emerald-600"
+        ></i
+        ><span id="toast-msg"></span>
+      </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+      (function () {
+        "use strict";
+
+        /* ---------- Animasi scroll (AOS) ---------- */
+        if (window.AOS) {
+          AOS.init({
+            duration: 650,
+            easing: "ease-out-cubic",
+            once: true,
+            offset: 60,
+          });
+        }
+
+        /* ---------- Headline berganti (Typed.js) ---------- */
+        var roleEl = document.getElementById("typed-role");
+        var roles = [
+          "IT Enthusiast",
+          "Dosen Ilmu Perpustakaan — UIN Alauddin Makassar",
+          "IT Integration Analyst",
+          "System Analyst & Middleware Engineer",
+          "Data Mining Practitioner",
+        ];
+        if (roleEl && window.Typed) {
+          new Typed("#typed-role", {
+            strings: roles,
+            typeSpeed: 45,
+            backSpeed: 22,
+            backDelay: 1800,
+            loop: true,
+            smartBackspace: true,
+          });
+        } else if (roleEl) {
+          roleEl.textContent = roles[0];
+        }
+
+        /* ---------- Toast ---------- */
+        var toast = document.getElementById("toast"),
+          toastMsg = document.getElementById("toast-msg"),
+          toastTimer;
+        function showToast(msg) {
+          if (!toast) return;
+          toastMsg.textContent = msg;
+          toast.classList.remove("hidden");
+          clearTimeout(toastTimer);
+          toastTimer = setTimeout(function () {
+            toast.classList.add("hidden");
+          }, 2200);
+        }
+
+        /* ---------- Tema gelap / terang ---------- */
+        var themeBtn = document.getElementById("theme-toggle");
+        if (themeBtn) {
+          themeBtn.addEventListener("click", function () {
+            var dark = document.documentElement.classList.toggle("dark");
+            localStorage.setItem("theme", dark ? "dark" : "light");
+            showToast(dark ? "Mode gelap aktif" : "Mode terang aktif");
+          });
+        }
+
+        /* ---------- Progress bar & tombol ke atas ---------- */
+        var bar = document.getElementById("progress-bar"),
+          toTop = document.getElementById("to-top"),
+          navbar = document.getElementById("navbar");
+        function onScroll() {
+          var h = document.documentElement.scrollHeight - window.innerHeight;
+          var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+          if (bar) bar.style.width = p + "%";
+          if (toTop) toTop.classList.toggle("hidden", window.scrollY < 400);
+          if (navbar) navbar.classList.toggle("shadow-md", window.scrollY > 10);
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+        if (toTop)
+          toTop.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+
+        /* ---------- Smooth scroll ---------- */
+        document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+          a.addEventListener("click", function (e) {
+            var id = this.getAttribute("href");
+            if (id.length < 2) return;
+            var target = document.querySelector(id);
+            if (!target) return;
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            history.replaceState(null, "", id);
+          });
         });
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu if open
-                    mobileMenu.classList.add('hidden');
-                }
+        /* ---------- Sorotan menu aktif ---------- */
+        var sections = document.querySelectorAll("section[id]");
+        var navLinks = document.querySelectorAll("[data-nav]");
+        function setActive(id) {
+          navLinks.forEach(function (l) {
+            var on = l.getAttribute("data-nav") === id;
+            l.classList.toggle("active", on);
+            l.classList.toggle("text-li-blue", on);
+            l.classList.toggle("dark:text-li-sky", on);
+            if (l.classList.contains("side-link"))
+              l.classList.toggle("bg-li-bluel", on);
+            if (l.classList.contains("side-link"))
+              l.classList.toggle("dark:bg-white/10", on);
+          });
+        }
+        if ("IntersectionObserver" in window) {
+          var spy = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (en) {
+                if (en.isIntersecting) setActive(en.target.id);
+              });
+            },
+            { rootMargin: "-45% 0px -50% 0px" },
+          );
+          sections.forEach(function (s) {
+            spy.observe(s);
+          });
+        }
+
+        /* ---------- Angka statistik ---------- */
+        function runCounter(el) {
+          var target = parseInt(el.getAttribute("data-target"), 10) || 0,
+            cur = 0;
+          var step = Math.max(1, Math.round(target / 28));
+          var t = setInterval(function () {
+            cur += step;
+            if (cur >= target) {
+              cur = target;
+              clearInterval(t);
+            }
+            el.textContent = cur;
+          }, 35);
+        }
+        /* ---------- Bar keahlian ---------- */
+        function runBars(scope) {
+          (scope || document)
+            .querySelectorAll(".skill-bar > span")
+            .forEach(function (s) {
+              s.style.width = s.getAttribute("data-w") + "%";
             });
+        }
+        if ("IntersectionObserver" in window) {
+          var once = new IntersectionObserver(
+            function (entries, obs) {
+              entries.forEach(function (en) {
+                if (!en.isIntersecting) return;
+                if (en.target.classList.contains("counter"))
+                  runCounter(en.target);
+                if (en.target.id === "keahlian") runBars(en.target);
+                obs.unobserve(en.target);
+              });
+            },
+            { threshold: 0.35 },
+          );
+          document.querySelectorAll(".counter").forEach(function (c) {
+            once.observe(c);
+          });
+          var skillSec = document.getElementById("keahlian");
+          if (skillSec) once.observe(skillSec);
+        } else {
+          document.querySelectorAll(".counter").forEach(runCounter);
+          runBars();
+        }
+
+        /* ---------- "Lihat selengkapnya" pada Tentang ---------- */
+        var aboutText = document.getElementById("about-text"),
+          aboutBtn = document.getElementById("about-toggle");
+        if (aboutBtn) {
+          aboutBtn.addEventListener("click", function () {
+            var clamped = aboutText.classList.toggle("clamp-3");
+            aboutBtn.textContent = clamped
+              ? "…lihat selengkapnya"
+              : "lihat lebih sedikit";
+          });
+        }
+
+        /* ---------- Pengalaman: tampilkan lainnya ---------- */
+        var moreExp = document.getElementById("more-exp"),
+          expBtn = document.getElementById("exp-toggle");
+        if (expBtn) {
+          expBtn.addEventListener("click", function () {
+            var hidden = moreExp.classList.toggle("hidden");
+            expBtn.innerHTML = hidden
+              ? 'Tampilkan 3 pengalaman lainnya <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>'
+              : 'Tampilkan lebih sedikit <i class="fa-solid fa-chevron-up ml-1 text-xs"></i>';
+          });
+        }
+
+        /* ---------- Filter proyek ---------- */
+        var filterBtns = document.querySelectorAll(".filter-btn");
+        var projectCards = document.querySelectorAll(".project-card");
+        filterBtns.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var f = btn.getAttribute("data-filter");
+            filterBtns.forEach(function (b) {
+              var on = b === btn;
+              b.classList.toggle("bg-li-blue", on);
+              b.classList.toggle("text-white", on);
+              b.classList.toggle("bg-li-bg", !on);
+              b.classList.toggle("dark:bg-white/10", !on);
+              b.classList.toggle("text-black/70", !on);
+              b.classList.toggle("dark:text-white/70", !on);
+            });
+            projectCards.forEach(function (c) {
+              var show = f === "all" || c.getAttribute("data-cat") === f;
+              c.classList.toggle("hidden", !show);
+              if (show) {
+                c.classList.remove("animate-pop");
+                void c.offsetWidth;
+                c.classList.add("animate-pop");
+              }
+            });
+          });
         });
 
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+        /* ---------- Detail proyek (modal) ---------- */
+        var PROJECTS = {
+          nbds: {
+            company: "PT Bank Mandiri Tbk",
+            title: "Project NBDS — Release 3.0",
+            role: "IT Integration Analyst · Sprint 6–7 · 2024–2025",
+            desc: "Terlibat dalam Project New BDS (Branch Delivery System) Release 3.0 pada unit IT Digital Branch Channel Delivery, mencakup analisis kebutuhan, perancangan alur integrasi, hingga pendampingan pengujian fitur.",
+            items: [
+              "Debit Card untuk nasabah Non ID KTP",
+              "Enhancement BOC — Kelola Kartu",
+              "Identifikasi nasabah Non Perorangan",
+              "Customer Data Maintenance Non Perorangan",
+              "Jual Beli Valas Non Perorangan",
+            ],
+            tech: [
+              "Integration Analysis",
+              "API / Web Service",
+              "UML",
+              "Jira",
+              "Confluence",
+            ],
+          },
+          octo: {
+            company: "PT Bank CIMB Niaga Tbk",
+            title: "Project OctoClicks",
+            role: "IT Middleware, Integration Analyst — ESB · 2022–2024",
+            desc: "Menangani sisi middleware dan Enterprise Service Bus untuk kanal digital OctoClicks, menghubungkan layanan internal bank dengan mitra pihak ketiga.",
+            items: [
+              "Opening Junior Indie",
+              "Tabungan Emas OCI — Pegadaian",
+              "PGN Prepaid OCI",
+              "Sunlife OCI",
+              "Ultra Voucher OCI",
+              "Leisure Train Ticket OCI — Tiket.com",
+              "PointXtra OCI",
+            ],
+            tech: [
+              "Enterprise Service Bus",
+              "Middleware",
+              "REST / SOAP",
+              "Postman",
+              "SQL",
+            ],
+          },
+          crop: {
+            company: "PT Cakrawala Digital Yaksa",
+            title: "Project CROP — Enterprise Application Suite",
+            role: "System Analyst · 2019–2020",
+            desc: "Perancangan dan pengembangan aplikasi internal korporat: dari penggalian kebutuhan pengguna, pemodelan proses bisnis, sampai dokumentasi teknis dan pendampingan implementasi.",
+            items: [
+              "Aplikasi Knowledge Management (KM)",
+              "Aplikasi Organizational Management & Employee Development Identification Needs (OM-EDIN)",
+              "Sistem Informasi Procurement (SIPROC)",
+            ],
+            tech: [
+              "System Analysis",
+              "UML",
+              "PHP / CodeIgniter",
+              "MySQL",
+              "Draw.io",
+            ],
+          },
         };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
+        var modal = document.getElementById("modal");
+        function openModal(key) {
+          var p = PROJECTS[key];
+          if (!p || !modal) return;
+          document.getElementById("modal-company").textContent = p.company;
+          document.getElementById("modal-title").textContent = p.title;
+          document.getElementById("modal-role").textContent = p.role;
+          document.getElementById("modal-desc").textContent = p.desc;
+          var list = document.getElementById("modal-list");
+          list.innerHTML = "";
+          p.items.forEach(function (it) {
+            var li = document.createElement("li");
+            li.className = "flex gap-2.5 text-black/75 dark:text-white/75";
+            li.innerHTML =
+              '<i class="fa-solid fa-circle-check text-li-blue dark:text-li-sky mt-0.5"></i><span></span>';
+            li.querySelector("span").textContent = it;
+            list.appendChild(li);
+          });
+          var tech = document.getElementById("modal-tech");
+          tech.innerHTML = "";
+          p.tech.forEach(function (t) {
+            var s = document.createElement("span");
+            s.className =
+              "text-xs px-3 py-1 rounded-full bg-li-bluel dark:bg-white/10 text-li-blue dark:text-li-sky font-semibold";
+            s.textContent = t;
+            tech.appendChild(s);
+          });
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+          document.body.style.overflow = "hidden";
+        }
+        function closeModal() {
+          if (!modal) return;
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+          document.body.style.overflow = "";
+        }
+        projectCards.forEach(function (c) {
+          c.addEventListener("click", function () {
+            openModal(c.getAttribute("data-project"));
+          });
+        });
+        var modalClose = document.getElementById("modal-close");
+        if (modalClose) modalClose.addEventListener("click", closeModal);
+        if (modal)
+          modal.addEventListener("click", function (e) {
+            if (e.target === modal) closeModal();
+          });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            closeModal();
+            hideSearch();
+          }
         });
 
-        // Active navigation highlighting
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
+        /* ---------- Tab keahlian ---------- */
+        var tabs = document.querySelectorAll(".skill-tab");
+        var panels = document.querySelectorAll(".skill-panel");
+        tabs.forEach(function (tab) {
+          tab.addEventListener("click", function () {
+            tabs.forEach(function (t) {
+              var on = t === tab;
+              t.classList.toggle("border-li-blue", on);
+              t.classList.toggle("text-li-blue", on);
+              t.classList.toggle("dark:text-li-sky", on);
+              t.classList.toggle("border-transparent", !on);
+              t.classList.toggle("text-black/55", !on);
+              t.classList.toggle("dark:text-white/55", !on);
             });
-
-            navLinks.forEach(link => {
-                link.classList.remove('text-neon-blue');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('text-neon-blue');
-                }
+            var key = tab.getAttribute("data-tab");
+            panels.forEach(function (p) {
+              var on = p.getAttribute("data-panel") === key;
+              p.classList.toggle("hidden", !on);
+              p.classList.toggle("grid", on);
+              if (on) runBars(p);
             });
+          });
         });
 
-
-
-        // Add scroll effect to navbar
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                navbar.classList.add('bg-white/98');
-            } else {
-                navbar.classList.remove('bg-white/98');
+        /* ---------- Salin ke papan klip ---------- */
+        function copyText(text, msg) {
+          var done = function () {
+            showToast(msg || "Berhasil disalin");
+          };
+          if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(text).then(done).catch(fallback);
+          } else {
+            fallback();
+          }
+          function fallback() {
+            var ta = document.createElement("textarea");
+            ta.value = text;
+            ta.style.position = "fixed";
+            ta.style.opacity = "0";
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+              document.execCommand("copy");
+              done();
+            } catch (err) {
+              showToast("Gagal menyalin");
             }
+            document.body.removeChild(ta);
+          }
+        }
+        document.querySelectorAll(".copy-btn").forEach(function (b) {
+          b.addEventListener("click", function () {
+            copyText(b.getAttribute("data-copy"), "Disalin ke papan klip");
+          });
         });
+        document.querySelectorAll("[data-copy-link]").forEach(function (b) {
+          b.addEventListener("click", function () {
+            copyText(window.location.href, "Tautan profil disalin");
+          });
+        });
+
+        /* ---------- Bagikan profil ---------- */
+        var shareBtn = document.getElementById("share-btn");
+        if (shareBtn) {
+          shareBtn.addEventListener("click", function () {
+            var data = {
+              title: "Bayu Rizki — IT Enthusiast",
+              text: "Profil profesional Bayu Rizki",
+              url: window.location.href,
+            };
+            if (navigator.share) {
+              navigator.share(data).catch(function () {});
+            } else {
+              copyText(window.location.href, "Tautan profil disalin");
+            }
+          });
+        }
+
+        /* ---------- Simpan kontak (vCard) ---------- */
+        var vcardBtn = document.getElementById("vcard-btn");
+        if (vcardBtn) {
+          vcardBtn.addEventListener("click", function () {
+            var vcf = [
+              "BEGIN:VCARD",
+              "VERSION:3.0",
+              "N:Rizki;Bayu;;;",
+              "FN:Bayu Rizki",
+              "TITLE:Dosen Asisten Ahli / IT Integration Analyst",
+              "ORG:UIN Alauddin Makassar;Fakultas Adab dan Humaniora",
+              "EMAIL;TYPE=WORK:bayu.rizki@uin-alauddin.ac.id",
+              "TEL;TYPE=CELL:+62 897 9116 836",
+              "ADR;TYPE=WORK:;;Jurusan Ilmu Perpustakaan UIN Alauddin Makassar;Gowa;Sulawesi Selatan;;Indonesia",
+              "URL:https://www.linkedin.com/in/bayu-rizki-94913a171",
+              "END:VCARD",
+            ].join("\r\n");
+            var url = URL.createObjectURL(
+              new Blob([vcf], { type: "text/vcard;charset=utf-8" }),
+            );
+            var a = document.createElement("a");
+            a.href = url;
+            a.download = "bayu-rizki.vcf";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            setTimeout(function () {
+              URL.revokeObjectURL(url);
+            }, 1000);
+            showToast("Kartu kontak diunduh");
+          });
+        }
+
+        /* ---------- Cetak ---------- */
+        var printBtn = document.getElementById("print-btn");
+        if (printBtn)
+          printBtn.addEventListener("click", function () {
+            window.print();
+          });
+
+        /* ---------- Pencarian dalam profil ---------- */
+        var input = document.getElementById("search-input");
+        var box = document.getElementById("search-results");
+        var index = [];
+        document.querySelectorAll(".s-item").forEach(function (el, i) {
+          if (!el.id) el.id = "s-item-" + i;
+          index.push({
+            id: el.id,
+            title: el.getAttribute("data-title") || "",
+            sub: el.getAttribute("data-sub") || "",
+            section: el.getAttribute("data-section") || "",
+          });
+        });
+        function hideSearch() {
+          if (box) box.classList.add("hidden");
+        }
+        function jumpTo(id) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          var panel = el.closest(".skill-panel");
+          if (panel && panel.classList.contains("hidden")) {
+            var tab = document.querySelector(
+              '.skill-tab[data-tab="' + panel.getAttribute("data-panel") + '"]',
+            );
+            if (tab) tab.click();
+          }
+          if (
+            el.closest("#more-exp") &&
+            document.getElementById("more-exp").classList.contains("hidden")
+          ) {
+            document.getElementById("exp-toggle").click();
+          }
+          if (el.classList.contains("hidden")) {
+            var all = document.querySelector('.filter-btn[data-filter="all"]');
+            if (all) all.click();
+          }
+          setTimeout(function () {
+            el.scrollIntoView({ behavior: "smooth", block: "center" });
+            el.classList.add("highlight-flash", "rounded-lg");
+            setTimeout(function () {
+              el.classList.remove("highlight-flash");
+            }, 1700);
+          }, 60);
+        }
+        if (input && box) {
+          input.addEventListener("input", function () {
+            var q = input.value.trim().toLowerCase();
+            if (q.length < 2) {
+              hideSearch();
+              return;
+            }
+            var hits = index
+              .filter(function (it) {
+                return (
+                  (it.title + " " + it.sub + " " + it.section)
+                    .toLowerCase()
+                    .indexOf(q) > -1
+                );
+              })
+              .slice(0, 8);
+            box.innerHTML = "";
+            if (!hits.length) {
+              box.innerHTML =
+                '<p class="px-3 py-3 text-sm text-black/50 dark:text-white/50">Tidak ada hasil untuk "' +
+                q.replace(/[<>&]/g, "") +
+                '"</p>';
+            } else {
+              hits.forEach(function (h) {
+                var b = document.createElement("button");
+                b.className =
+                  "w-full text-left px-3 py-2 rounded-md hover:bg-li-bg dark:hover:bg-white/10 transition-colors";
+                b.innerHTML =
+                  '<p class="text-sm font-semibold"></p><p class="text-xs text-black/50 dark:text-white/50"></p>';
+                b.children[0].textContent = h.title;
+                b.children[1].textContent =
+                  h.section + (h.sub ? " · " + h.sub : "");
+                b.addEventListener("click", function () {
+                  hideSearch();
+                  input.value = "";
+                  jumpTo(h.id);
+                });
+                box.appendChild(b);
+              });
+            }
+            box.classList.remove("hidden");
+          });
+          document.addEventListener("click", function (e) {
+            if (!box.contains(e.target) && e.target !== input) hideSearch();
+          });
+        }
+
+        /* ---------- Tahun otomatis ---------- */
+        var y = document.getElementById("year");
+        if (y) y.textContent = new Date().getFullYear();
+      })();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'978681e8c75f9d6f',t:'MTc1Njc0Nzk1MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  </body>
 </html>
